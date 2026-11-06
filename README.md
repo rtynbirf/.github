@@ -1,2 +1,9 @@
-# .github
-Дефолтные community health files аккаунта: issue-формы, PR-шаблон, SUPPORT, ACCESSIBILITY, CODE_OF_CONDUCT
+# .github — дефолтные community health files
+
+Публичный репозиторий-носитель дефолтных файлов сообщества аккаунта `rtynbirf`.
+Файлы отсюда наследуются всеми репозиториями аккаунта там, где у репо нет собственной версии
+(механизм default community health files, docs.github.com). README и LICENSE не наследуются —
+у каждого репо свои.
+
+Состав: `ISSUE_TEMPLATE/` (bug + feature формы, config), `pull_request_template.md`,
+`CODE_OF_CONDUCT.md`, `SUPPORT.md`, `ACCESSIBILITY.md`.

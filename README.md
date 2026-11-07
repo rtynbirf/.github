@@ -1,5 +1,8 @@
 # .github — дефолтные community health files
 
+<p align="center"><img src=".github/social-preview.png" alt=".github" width="100%"></p>
+
+
 Публичный репозиторий-носитель дефолтных файлов сообщества аккаунта `rtynbirf`.
 Файлы отсюда наследуются всеми репозиториями аккаунта там, где у репо нет собственной версии
 (механизм default community health files, docs.github.com). README и LICENSE не наследуются —

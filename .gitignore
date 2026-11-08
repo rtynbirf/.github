@@ -1,0 +1,15 @@
+# Системный и редакторский мусор
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Временные файлы
+*.tmp
+*.orig
+*.rej
+*.bak

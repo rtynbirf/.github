@@ -1,0 +1,57 @@
+# rtynbirf — машинный фасад аккаунта (account llms.txt)
+
+> Автоген 2026-11-08 19:46 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
+
+## Репозитории публичные (27)
+- [.github](https://github.com/rtynbirf/.github) — Дефолтные community health files аккаунта: issue-формы, PR-шаблон, SUPPORT, ACCESSIBILITY, CODE_OF_CONDUCT
+- [agryp](https://github.com/rtynbirf/agryp) — PID1-подобный супервизор AI-агентов: один файл C, ноль зависимостей, файл-как-API (agrypctl), самоверифицирующийся NDJSON-журнал
+- [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
+- [cell-swarm](https://github.com/rtynbirf/cell-swarm) — РОЙ (Cell Swarm) — сингулярная эмерджентная архитектура: клетка, окно, указатели, храповик, семя
+- [cell65-host](https://github.com/rtynbirf/cell65-host) — «Антицензор» MV3: Chrome-расширение обхода блокировок (PAC/DNR/WebRTC/auth-прокси) + sovereign-node (sing-box, PAC-сервер, Windows-скрипты). Без телеметрии. Человеком для человека.
+- [commons](https://github.com/rtynbirf/commons) — COMMONS — один организм из лучших открытых проектов: геном-спеки, синапсы MCP, кровь событий, иммунитет-лицензии. Органы остаются на upstream — единым становится обмен. ЦЕЛОЕ = ЧЕЛОВЕК > суммы частей. Провенанс: здесь нет ни байта чужого (REUSE 3.3).
+- [domovoy-tweaker](https://github.com/rtynbirf/domovoy-tweaker) — ДОМОВОЙ / MEGA=TWEAKER — Windows tweaker as a state, not an event: change ledger, drift sentinel, per-feature undo, effect verification. PowerShell prototype.
+- [global-video-platforms-registry](https://github.com/rtynbirf/global-video-platforms-registry) — Верифицированный реестр 1071 видеоплатформ (1032 активных) — окт 2026. CSV/JSON/XLSX/PDF + методология + evidence
+- [karaoke-dream](https://github.com/rtynbirf/karaoke-dream) — Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.
+- [markitdown](https://github.com/rtynbirf/markitdown) — Python tool for converting files and office documents to Markdown.
+- [neutral-browser](https://github.com/rtynbirf/neutral-browser) — neutral-browser: user-owned browser engine from scratch (Rust, zero deps) — HTML->DOM->CSS->STYLE->LAYOUT->PAINT->PNG; HUMAN_FIRST norms built in
+- [os-forge](https://github.com/rtynbirf/os-forge) — OS-FORGE v0.1.1 — самодостаточный автономный батник: карта среды (железо+ОС по фактам) → решение → сеть (репозиторий пунктов) → сборка актуальной ОС → готовый ISO с манифестом. Windows (cmd+PowerShell) и Linux (bash+xorriso). Ноль прав администратора.
+- [polymath-atlas-v107](https://github.com/rtynbirf/polymath-atlas-v107) — POLYMATH-ATLAS v107.1-FINAL — honest evidence-audit framework in Lean 4. VERIFIED ENGINEERING FRAMEWORK (prototype), not a theorem prover. Open verification protocol in README.
+- [polymath-gen](https://github.com/rtynbirf/polymath-gen) — ПОЛИМАТ-ГЕН: автономный медиа-агент — задание человека -> промпт -> изображение/видео -> самокритика -> доработка. LLM-мозг + open-source руки (ComfyUI/FLUX/Wan2.2)
+- [polymath-os](https://github.com/rtynbirf/polymath-os) — Personal sovereign media-OS. 5-layer LFS-style self-bootstrapping repo. SINGULYAR Emergent Intent Runtime v0.6. 35 ADRs. make verify 33/33. 290 tests green.
+- [polymath-tools-atlas](https://github.com/rtynbirf/polymath-tools-atlas) — ПОЛИМАТ · TOOLS-ATLAS — каталог 665 AI-инструментов по контракту ГОЛОГРАММА v1 (6 слоёв, 3 статуса, закон цепочек). 147 local vs 151 cloud. 3 конфигурации железа. 12 софт-компонентов. Пломбы SHA256. Проверяй строкой, не смыслом.
+- [release-vault](https://github.com/rtynbirf/release-vault) — Encrypted off-site archive (AES-256-CBC/PBKDF2-600k) of release assets from private repos. Filenames are neutralized; manifests are encrypted. Key held only by the owner. Created 2026-11-07.
+- [revo](https://github.com/rtynbirf/revo) — REVO — runnable-прототип метода Reve: сначала LAYOUT (структура сцены), потом RENDER. revo.py: скелет → промпт → рендер (offline/zai) → склейка. Серия RTYNBIRF LABS №26.
+- [rtynbirf](https://github.com/rtynbirf/rtynbirf) — Полимат-универсум: 41 репозиторий, 2700+ коммитов с 2022 года. СИНГУЛЯР · РОЙ · Атласы · Windows-инструменты
+- [rtynbirf.github.io](https://github.com/rtynbirf/rtynbirf.github.io) — MEGA-PLAYER SINGULYAR: universal autopilot video player
+- [rumu](https://github.com/rtynbirf/rumu) — ⚡ СИНГУЛЯР РУМУ — Sovereign BL/GL Streaming. P2P+autopilot, NO corporate. 249 тайтлов. Держатель имени; код — веткой rumu в singulyar. (Восстановлен Полиматом из пломбы polimat-vault 2026-11-08)
+- [runtime-protocol](https://github.com/rtynbirf/runtime-protocol) — Клетка роя cell-swarm: исполнимая модель динамики узла (уравнение ρ̇, GENESIS_EXEC, VOLATILE_META, CANCER_FILTER). stdlib-only, офлайн.
+- [ruvson-rse2](https://github.com/rtynbirf/ruvson-rse2) — RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.
+- [singulyar](https://github.com/rtynbirf/singulyar) — СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни × 200 языков · ОРКЕСТРАТОР ·15 · хаб + 45 дверей · PWA (офлайн, без слежки)
+- [singulyar-llm](https://github.com/rtynbirf/singulyar-llm) — Локальная модель СИНГУЛЯРА: Qwen2.5-0.5B-Instruct GGUF частями + инструкционный слой (ОБУЧЕНИЕ). Веса Apache-2.0, генерация — в браузере человека.
+- [universal-agent](https://github.com/rtynbirf/universal-agent) — UniversalAgent (TsUA) - single-brain holistic agent: one LLM core, closed perception-action loop, four-layer memory, sandboxed tools. Pure stdlib.
+- [voice-atlas-llm](https://github.com/rtynbirf/voice-atlas-llm) — Атлас-LLM: модель-эксперт по клонированию голоса (дизентанглмент, TTS/VC/SVC/SVS) — LoRA-обучение на корпусе атласа 2026, RAG, гейты качества
+
+## Репозитории приватные (15)
+
+<!-- имена без описаний: фасад счёта, не содержимого -->
+- edinyy-svod (private)
+- github-runbook (private)
+- H-PE11-PHOENIX (private)
+- language-through-the-ages (private)
+- nous (private)
+- polimat-hub (private)
+- polimat-task174 (private)
+- red-thread-debt-audit (private)
+- rent-mechanism-q43 (private)
+- repo-doctrine (private)
+- ruvson-lyrics (private)
+- task-graph-propagator (private)
+- uace-pml (private)
+- web-evolution-1991-2026 (private)
+- windows-chronicle (private)
+
+## Счёт
+- public: 27
+- private: 15
+- total: 42

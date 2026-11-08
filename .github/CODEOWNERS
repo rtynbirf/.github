@@ -1,3 +1,6 @@
-# Код-владелец по умолчанию для мета-репо (FIX-1.3, 2026-11-09)
-# Учёт: CODEOWNERS в .github репо действует и как account-wide default community file.
+# Код-владелец по умолчанию — весь аккаунт rtynbirf (П36, волна ×4, 2026-11-11)
+# Автоген: python3 tools/generate-codeowners.py --print > .github/CODEOWNERS
+#          CI сверяет канон с файлом (account-facade.yml) — руками не править.
+# Учёт: каждое новое репо без собственного CODEOWNERS наследует мембрану отсюда
+# (docs/CODE-OWNER-DEFAULT.md; закрепление в repo-doctrine/04 — отдельная волна).
 * @rtynbirf

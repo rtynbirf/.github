@@ -1,0 +1,3 @@
+# Код-владелец по умолчанию для мета-репо (FIX-1.3, 2026-11-09)
+# Учёт: CODEOWNERS в .github репо действует и как account-wide default community file.
+* @rtynbirf

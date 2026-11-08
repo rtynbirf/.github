@@ -1,0 +1,30 @@
+# .github
+> Дефолтные community health files аккаунта: issue-формы, PR-шаблон, SUPPORT, ACCESSIBILITY, CODE_OF_CONDUCT
+
+Автоген 2026-11-08 · источник: живой GitHub API (номера и файлы не руками) · владелец rtynbirf · ветка `main`
+
+## Мембрана
+- README.md — для человека (.github — дефолтные community health files)
+- AGENTS.md — нет в этом репо
+- LICENSE — MIT
+- topics: community-health, github-meta, meta-tools
+
+## Карта корня
+- .github/
+- ACCESSIBILITY.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- ISSUE_TEMPLATE/
+- LICENSE
+- README.md
+- SECURITY.md
+- SUPPORT.md
+- pull_request_template.md
+
+## CI
+- workflow: ci
+
+## Ссылки
+- [GitHub](https://github.com/rtynbirf/.github)
+- [README](https://github.com/rtynbirf/.github/blob/main/README.md)
+- [raw llms.txt](https://raw.githubusercontent.com/rtynbirf/.github/main/llms.txt)

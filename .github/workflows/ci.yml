@@ -1,0 +1,36 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Health-файлы и YAML-гейты
+        run: |
+          python3 - <<'PY'
+          import glob, os, sys
+          try:
+              import yaml
+          except ImportError:
+              sys.exit('PyYAML недоступен на раннере — неожиданно')
+          errs = []
+          for p in glob.glob('**/*.yml', recursive=True) + glob.glob('**/*.yaml', recursive=True):
+              try:
+                  yaml.safe_load(open(p, encoding='utf-8'))
+              except Exception as e:
+                  errs.append(f'{p}: {str(e)[:80]}')
+          for must in ('CODE_OF_CONDUCT.md',):
+              if not os.path.exists(must):
+                  errs.append(f'нет {must}')
+          if errs:
+              sys.exit('; '.join(errs[:5]))
+          print('OK: YAML чисты, health-файлы на месте')
+          PY

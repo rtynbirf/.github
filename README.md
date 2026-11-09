@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="banner.png" alt=".github — Community health аккаунта: issue-формы и рамка" width="100%">
+</div>
+
 # .github — дефолтные community health files
 
 <p align="center"><img src=".github/social-preview.png" alt=".github" width="100%"></p>

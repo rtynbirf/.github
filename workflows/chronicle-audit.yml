@@ -1,0 +1,59 @@
+name: chronicle-audit
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # каждый понедельник 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Сверка карта=территория
+        env:
+          GH_TOKEN: ${{ secrets.POLIMAT_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, sys
+          tok = os.environ.get("GH_TOKEN", "")
+          hdr = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+          if tok: hdr["Authorization"] = "Bearer " + tok
+          def api(url):
+              req = urllib.request.Request(url, headers=hdr)
+              out, page = [], 1
+              while True:
+                  with urllib.request.urlopen(req + ("&" if "?" in url else "?") + f"page={page}&per_page=100") as r:
+                      batch = json.load(r)
+                  out += batch
+                  if len(batch) < 100: break
+                  page += 1
+              return out
+          scope = "/user/repos?visibility=all&affiliation=owner" if tok else "/users/rtynbirf/repos?type=owner"
+          repos = api("https://api.github.com" + scope)
+          priv = [r["name"] for r in repos if r.get("private")]
+          nolicense = [r["name"] for r in repos if not r.get("license") and not r.get("fork")]
+          chron = open("CHRONICLE.md", encoding="utf-8").read()
+          missing = [r["name"] for r in repos if f"[{r['name']}]" not in chron]
+          problems = []
+          if priv:     problems.append("🔒 Приватные репо (критичное не опубликовано): " + ", ".join(priv))
+          if nolicense: problems.append("⚖️ Репо без лицензии: " + ", ".join(nolicense))
+          if missing:  problems.append("🗺️ Есть в территория, нет на карте CHRONICLE.md: " + ", ".join(missing))
+          status = "✅ Карта = территория. Расхождений нет." if not problems else "\n\n".join(problems)
+          body = f"## Еженедельная сверка\n\n{status}\n\n_Автоотчёт chronicle-audit._"
+          print(body)
+          if problems:
+              import urllib.error
+              data = json.dumps({"title": "Хроника: расхождения карта≠территория", "body": body}).encode()
+              req = urllib.request.Request("https://api.github.com/repos/rtynbirf/.github/issues",
+                                           data=data, method="POST",
+                                           headers={**hdr, "Content-Type": "application/json"})
+              try:
+                  urllib.request.urlopen(req)
+                  print("issue создан")
+              except urllib.error.HTTPError as e:
+                  print("issue не создан:", e.code)
+          PY

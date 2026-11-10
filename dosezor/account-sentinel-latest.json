@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-10T11:44:28.141982+00:00",
- "run_id": "42809903760",
+ "generated": "2026-11-10T11:59:16.866482+00:00",
+ "run_id": "42811908975",
  "verdict": "МЕСТА К ВЫЛИЗЫВАНИЮ: публичных 0",
  "public_repos": 1,
  "public_hole_repos": 0,
  "active_wave_repos": 31,
  "private_billing_frozen": 0,
- "private_hole_flags": 22,
+ "private_hole_flags": 7,
  "private_open_pr_repos": 2,
  "public": [
   {

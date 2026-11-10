@@ -1,9 +1,9 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-10 13:04 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-10 18:39 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (51)
+## Репозитории публичные (53)
 - [.github](https://github.com/rtynbirf/.github) — Дефолтные community health files аккаунта: issue-формы, PR-шаблон, SUPPORT, ACCESSIBILITY, CODE_OF_CONDUCT
 - [agryp](https://github.com/rtynbirf/agryp) — PID1-подобный супервизор AI-агентов: один файл C, ноль зависимостей, файл-как-API (agrypctl), самоверифицирующийся NDJSON-журнал
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
@@ -12,6 +12,7 @@
 - [combain-v2](https://github.com/rtynbirf/combain-v2) — Self-hosted messenger — Express + SQLite (WAL), Class A/B realtime delivery, Litestream backups, Caddy TLS, full CI/CD
 - [commons](https://github.com/rtynbirf/commons) — COMMONS — один организм из лучших открытых проектов: геном-спеки, синапсы MCP, кровь событий, иммунитет-лицензии. Органы остаются на upstream — единым становится обмен. ЦЕЛОЕ = ЧЕЛОВЕК > суммы частей. Провенанс: здесь нет ни байта чужого (REUSE 3.3).
 - [domovenok](https://github.com/rtynbirf/domovenok) — 🏠 Командный центр дома: задачи, комнаты, расходы и индекс порядка. Next.js 16 · TypeScript · Prisma · Vitest · зелёный CI
+- [domovoy-ritual](https://github.com/rtynbirf/domovoy-ritual) — Ритуал дома как конечный автомат: поработал → сделал → убрал за собой. S0-покой гарантирован. FSM: устав + исполняемый автомат (stdlib-only).
 - [domovoy-tweaker](https://github.com/rtynbirf/domovoy-tweaker) — ДОМОВОЙ / MEGA=TWEAKER — Windows tweaker as a state, not an event: change ledger, drift sentinel, per-feature undo, effect verification. PowerShell prototype.
 - [edinyy-svod](https://github.com/rtynbirf/edinyy-svod) — ЕДИНЫЙ СВОД архива rtynbirf: 41 репозиториев — каталог, 8 кластеров, конституции, программы, инварианты, дыры. Автономная HTML-экспозиция: один файл, ноль внешних запросов.
 - [github-runbook](https://github.com/rtynbirf/github-runbook) — Ранбук: настройка GitHub-репозитория человеком для человека — все флаги Settings, ветки и защита (Free vs Pro), безопасность, проверенная API-шпаргалка, журнал верификации
@@ -19,6 +20,7 @@
 - [H-PE11-PHOENIX](https://github.com/rtynbirf/H-PE11-PHOENIX) — PHOENIX-11: ворклог операций TH-* (журнал неповторимых результатов), сборки WinPE, сессии. Правила ведения — в rtynbirf/repo-doctrine.
 - [karaoke-dream](https://github.com/rtynbirf/karaoke-dream) — Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.
 - [language-through-the-ages](https://github.com/rtynbirf/language-through-the-ages) — Язык сквозь эпохи — автономная HTML-экспозиция: семь способов мыслить язык (7 эпох × 7 гарнитур, эпистемические комментарии)
+- [linguistic-code](https://github.com/rtynbirf/linguistic-code) — Самодостаточный философский артефакт о языке, теле и опыте. δ requires body.
 - [markitdown](https://github.com/rtynbirf/markitdown) — Python tool for converting files and office documents to Markdown.
 - [neutral-browser](https://github.com/rtynbirf/neutral-browser) — neutral-browser: user-owned browser engine from scratch (Rust, zero deps) — HTML->DOM->CSS->STYLE->LAYOUT->PAINT->PNG; HUMAN_FIRST norms built in
 - [nous](https://github.com/rtynbirf/nous) — НОУС — эмерджентное сингулярное репо: конституция для человека и агентов, ТЗ форжа ISO, дорожная карта, контур исполнения
@@ -61,6 +63,6 @@
 <!-- токена не было: приватный срез недоступен, счёт см. линт -->
 
 ## Счёт
-- public: 51
+- public: 53
 - private: 0
-- total: 51
+- total: 53

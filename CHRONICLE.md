@@ -11,7 +11,7 @@
 4. **Защитный контур включён:** Secret Scanning + Push Protection + Dependabot на каждом репо.
 5. **Каждую неделю** `chronicle-audit` сверяет карту с территорией и заводит issue при расхождении.
 
-## Инвентарь: 48 репозиториев, приватных: 0
+## Инвентарь: 51 репозиториев, приватных: 0 * (срез 2026-11-11; таблица выше — срез 11-10, пополнение: POLYMATH-ATLAS-GESTALT-CANON, polymath-multiagent, yazyk-skvoz-epohi)
 
 | Репозиторий | Вид | Язык | Лицензия | Последний push | Назначение |
 |---|---|---|---|---|---|
@@ -70,3 +70,13 @@
 - Найден и вычищен мёртвый токен в `polimat-hub/tools/token_health.py` (filter-repo, 129 коммитов переписаны).
 - Санкционированные иммунизации: INNERTUBE_API_KEY (`nous/.secret-immunity-ignore`), publicKeyToken в autounattend, base64-шрифты.
 - Все 15 репо переведены в публичные; Secret Scanning / Push Protection / Dependabot включены (HTTP 200 ×30).
+
+- Хирургия от 2026-11-11 (мандат Хозяина, «house-sweep»): диагноз «призрака» роя опровергнут фактом —
+  первопричина мгновенных failure/0-jobs — невалидный YAML (двоеточие в нецитированном step-name
+  ritual-law-drill.yml); цитирование → регистрация → живой прогон success.
+- Убрано 59 ghost-записей + 21 протухший Dependabot-прогон; починены с dispatch-доказательствами:
+  манифест repo-doctrine, vault-integrity, patrol gvpr, CI domovenok (prisma orm#27754), крон-зрение
+  edinyy-svod (SVOD_TOKEN sealed-box, expect 51), tripwire ×2, caveats-registry, ДОКУМЕНТАЦИЯ ATLAS.
+- Итог дня: 458 воркфлоу × 51 репо — красных latest 0; открытых issues/PR 0; нотификаций 0.
+  Канон: **УСТАВ-ДОМА.md** (FSM тактов, инварианты I1–I6, машины дома, мировой бенчмарк 2026).
+- Машина «УБРАЛ» издана: `.github/workflows/house-sweep.yml` (пн 04:17 UTC + dispatch).

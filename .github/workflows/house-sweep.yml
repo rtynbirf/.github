@@ -1,0 +1,127 @@
+name: house-sweep · УБРАЛ (третий такт ритуала)
+
+# УСТАВ-ДОМА.md §1: поработал → сделал → убрал. Этот воркфлоу — машинный «УБРАЛ»
+# на уровне аккаунта ×51 (мандат Хозяина 2026-11-11, хирургия дня — УСТАВ §7):
+#   1) ghost-прогоны (conclusion=failure при 0 джобов — мусор битых регистраций) → DELETE;
+#   2) протухшие Dependabot-прогоны старше 7 дней → DELETE (свежий цикл даст новые);
+#   3) непрочитанные нотификации → PUT /notifications (inbox-zero, инвариант I-3);
+#   4) инварианты I-1/I-2 (очередь 0, красные latest) → вердикт в job summary.
+# Уборщик зелёный, когда убрал и отчитался; красный — только при аварии транспорта API.
+# Осмотр — account-sentinel (пн 04:43), карта — account-facade; факты — CHRONICLE.md.
+
+on:
+  schedule:
+    - cron: '17 4 * * 1'   # понедельник 04:17 UTC — до осмотра sentinel (04:43), вне топ-часов
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: house-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TOKEN: ${{ secrets.ACCOUNT_TOKEN || github.token }}
+    steps:
+      - name: Checkout (SHA-пин, канон роя)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Уборка аккаунта (ghost-нуль → dependabot-старьё → inbox-zero → инварианты)
+        run: |
+          python3 - <<'PY'
+          import json, time, urllib.request, urllib.error, os, sys
+
+          TOK = os.environ.get("TOKEN", "")
+          API = "https://api.github.com"
+          SUM = []
+
+          def gh(method, url, ok=(200, 204)):
+              req = urllib.request.Request(url, method=method, headers={
+                  "Authorization": f"Bearer {TOK}",
+                  "Accept": "application/vnd.github+json",
+                  "User-Agent": "house-sweep",
+              })
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as r:
+                      body = r.read()
+                      return r.status, (json.loads(body) if body and body.strip().startswith((b"{", b"[")) else None)
+              except urllib.error.HTTPError as e:
+                  return e.code, None
+
+          if not TOK:
+              SUM.append("⚠️ Нет ACCOUNT_TOKEN — уборка невозможна, нужен секрет (сигнал роя).")
+              print("\n".join(SUM)); sys.exit(0)
+
+          # 1) все репо (пагинация)
+          repos, page = [], 1
+          while True:
+              st, d = gh("GET", f"{API}/user/repos?per_page=100&visibility=all&page={page}")
+              if st != 200 or not d: break
+              repos += d
+              if len(d) < 100: break
+              page += 1
+          SUM.append(f"репозиториев: {len(repos)}")
+
+          ghosts, dependabot, red_latest, deleted = [], [], [], 0
+          for r in repos:
+              name = r["name"]
+              st, d = gh("GET", f"{API}/repos/rtynbirf/{name}/actions/runs?per_page=100")
+              if st != 200:
+                  continue
+              runs = d.get("workflow_runs", [])
+              latest = {}
+              for run in sorted(runs, key=lambda x: x["created_at"]):
+                  latest[run["name"]] = run
+              for k, run in latest.items():
+                  if run["conclusion"] not in ("success", "skipped", "neutral"):
+                      red_latest.append(f"{name} :: {k} ({run['conclusion']})")
+              for run in runs:
+                  if run["conclusion"] != "failure":
+                      continue
+                  is_ghost = run["name"].startswith(".github/workflows/")
+                  is_dep = (" in / for " in run["name"]) or run["path"].startswith("dynamic/dependabot/")
+                  if not (is_ghost or is_dep):
+                      continue
+                  jst, jd = gh("GET", f"{API}/repos/rtynbirf/{name}/actions/runs/{run['id']}/jobs?per_page=1")
+                  njobs = (jd or {}).get("total_count", 0)
+                  stale = run["created_at"] < time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(time.time() - 7 * 86400))
+                  if (is_ghost and njobs == 0) or (is_dep and njobs == 0) or (is_dep and stale):
+                      dst, _ = gh("DELETE", f"{API}/repos/rtynbirf/{name}/actions/runs/{run['id']}")
+                      if dst == 204:
+                          deleted += 1
+                      else:
+                          time.sleep(1)
+                          dst, _ = gh("DELETE", f"{API}/repos/rtynbirf/{name}/actions/runs/{run['id']}")
+                          deleted += 1 if dst == 204 else 0
+                  elif is_ghost:
+                      ghosts.append(f"{name} :: run {run['id']} (джобов: {njobs}) — не мусор, оставлен")
+                  time.sleep(0.15)
+
+          # 3) inbox-zero
+          nst, _ = gh("PUT", f"{API}/notifications")
+          SUM.append(f"нотификации прочитаны: HTTP {nst} (205 = ок)")
+
+          # 4) очередь
+          qst, qd = gh("GET", f"{API}/search/issues?q=user%3Artynbirf+is%3Aopen&per_page=1")
+          open_n = (qd or {}).get("total_count", "?")
+          SUM.append(f"открытых issues+PR: {open_n} (норма: 0)")
+
+          SUM.append(f"удалено хвостов: {deleted} (ghost + протухший dependabot)")
+          if red_latest:
+              SUM.append(f"🔴 красных latest: {len(red_latest)} — сигнал роя, чинить по фактам:")
+              SUM += [f"  - {x}" for x in red_latest[:20]]
+          else:
+              SUM.append("🟢 красных latest: 0 — ДОМ ЧИСТ")
+
+          text = "## 🧹 house-sweep · УБРАЛ\n```\n" + "\n".join(SUM) + "\n```"
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+              f.write(text + "\n")
+          print(text)
+          PY

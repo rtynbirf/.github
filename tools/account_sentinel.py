@@ -96,8 +96,9 @@ def sweep_repo(full, priv, hours_since_push):
             name = last["name"]
             if priv:
                 st, jobs = api(last["jobs_url"])
-                if (jobs or {}).get("total_count") == 0:
-                    h["info"]["billing"] = True  # не красный маяк: биллинг-стена
+                jl = (jobs or {}).get("jobs") or []
+                if jl and all(len(j.get("steps") or []) == 0 for j in jl):
+                    h["info"]["billing"] = True  # не красный маяк: биллинг-стена (0 шагов)
                 else:
                     h["holes"].append(f"красный прогон: {name}")
             elif DEP_UPDATE_RE.search(name) or "Update #" in name:

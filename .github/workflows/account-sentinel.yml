@@ -1,0 +1,42 @@
+name: account-sentinel
+
+# 🛡 ДОЗИОР АККАУНТА — дом = автомат (Э-2.4 + T24 + T25, волна «ДОМ=АВТОМАТ»).
+# Живёт в ПУБЛИЧНОМ .github: работает даже при исчерпанных минутах приватных репо
+# (биллинг-стена 2026-11-10, пломба github-runbook#10). Публичный срез — подробно,
+# приватный — только агрегаты (мембрана приватности). Пульс-коммит держит репо
+# живым, чтобы GitHub не отключил крон по 60-дневному бездействию.
+# Секрет ACCOUNT_TOKEN (классический PAT) — кросс-репо чтение; без него честно
+# осматривается публичный срез анонимно.
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: account-sentinel
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: '43 4 * * 1' # понедельник 04:43 UTC — после фасада (03:37)
+  workflow_dispatch: {}
+
+jobs:
+  dosezor:
+    name: живой осмотр флота
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: осмотр флота (чек-лист 01 + T24 + T25)
+        continue-on-error: true
+        env:
+          SENTINEL_TOKEN: ${{ secrets.ACCOUNT_TOKEN || github.token }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: python3 tools/account_sentinel.py
+      - name: приёмка следа
+        run: |
+          test -f dosezor/heartbeat.json && echo "пульс записан: $(cat dosezor/heartbeat.json)"
+          test -f dosezor/account-sentinel-latest.json && echo "след записан: $(wc -c < dosezor/account-sentinel-latest.json) байт"

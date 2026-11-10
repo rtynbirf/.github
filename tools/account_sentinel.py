@@ -58,6 +58,11 @@ def sweep_repo(full, priv, hours_since_push):
              "delete_branch_on_merge": True, "allow_auto_merge": True,
              "allow_update_branch": True, "use_squash_pr_title_as_default": True}
     for k, v in canon.items():
+        if k == "allow_auto_merge" and priv:
+            # план-гейт free: на приватных API молча игнорирует (HTTP 200, байт не прилипает)
+            if cur.get(k) is not True:
+                h["notes"].append("auto-merge не прилипает: приватному нужен план Pro (ждёт хозяина)")
+            continue
         if cur.get(k) != v:
             h["holes"].append(f"флаг {k}≠канон")
     if not cur.get("description"):

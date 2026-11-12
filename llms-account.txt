@@ -1,6 +1,6 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-12 13:23 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-12 13:26 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
 ## Репозитории публичные (64)

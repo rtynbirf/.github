@@ -1,20 +1,21 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-12 13:26 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-14 20:59 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (64)
+## Репозитории публичные (66)
 - [.github](https://github.com/rtynbirf/.github) — .github — дефолтные community health files
 - [agryp](https://github.com/rtynbirf/agryp) — agryp — неспящий супервизор агентов уровня PID 1
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
 - [cell-swarm](https://github.com/rtynbirf/cell-swarm) — РОЙ (Cell Swarm) — сингулярная эмерджентная архитектура: клетка, окно, указатели, храповик, семя
-- [cell65-host](https://github.com/rtynbirf/cell65-host) — cell65-host
+- [cell65-host](https://github.com/rtynbirf/cell65-host) — cell65-host — Антицензор (Chrome MV3): PAC/DNR/WebRTC-защита, hosts-блокировка, обход блокировок
 - [combain-v2](https://github.com/rtynbirf/combain-v2) — COMBAIN v2 — self-hosted messenger
 - [commons](https://github.com/rtynbirf/commons) — COMMONS — один организм из лучших открытых проектов: геном-спеки, синапсы MCP, кровь событий, иммунитет-лицензии. Органы остаются на upstream — единым становится обмен. ЦЕЛОЕ = ЧЕЛОВЕК > суммы частей. Провенанс: здесь нет ни байта чужого (REUSE 3.3).
 - [domovenok](https://github.com/rtynbirf/domovenok) — 🏠 Командный центр дома: задачи, комнаты, расходы и индекс порядка. Next.js 16 · TypeScript · Prisma · Vitest · зелёный CI
 - [domovoy](https://github.com/rtynbirf/domovoy) — КНИГА ДОМОВОГО
 - [domovoy-ritual](https://github.com/rtynbirf/domovoy-ritual) — Ритуал дома как конечный автомат: поработал → сделал → убрал за собой. S0-покой гарантирован. FSM: устав + исполняемый автомат (stdlib-only).
 - [domovoy-tweaker](https://github.com/rtynbirf/domovoy-tweaker) — ДОМОВОЙ / MEGA=TWEAKER — Windows tweaker as a state, not an event: change ledger, drift sentinel, per-feature undo, effect verification. PowerShell prototype.
+- [door-zero](https://github.com/rtynbirf/door-zero) — Door Zero: дверь без контента. PID 0 системы: удаление ломает boot. GET -> 204, POST/PUT -> 403 Void.
 - [edinyy-svod](https://github.com/rtynbirf/edinyy-svod) — ЕДИНЫЙ СВОД
 - [ekonomika](https://github.com/rtynbirf/ekonomika) — КНИГА ЭКОНОМИКИ
 - [ekspozicii](https://github.com/rtynbirf/ekspozicii) — КНИГА ЭКСПОЗИЦИЙ
@@ -23,6 +24,7 @@
 - [github-runbook](https://github.com/rtynbirf/github-runbook) — Ранбук: настройка GitHub-репозитория человеком для человека — все флаги Settings, ветки и защита (Free vs Pro), безопасность, проверенная API-шпаргалка, журнал верификации
 - [global-video-platforms-registry](https://github.com/rtynbirf/global-video-platforms-registry) — Верифицированный реестр 1071 видеоплатформ (1032 активных) — окт 2026. CSV/JSON/XLSX/PDF + методология + evidence
 - [H-PE11-PHOENIX](https://github.com/rtynbirf/H-PE11-PHOENIX) — PHOENIX-11: ворклог операций TH-* (журнал неповторимых результатов), сборки WinPE, сессии. Правила ведения — в rtynbirf/repo-doctrine.
+- [hologram](https://github.com/rtynbirf/hologram) — осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв
 - [index](https://github.com/rtynbirf/index) — SSOT-хаб: реестр проектов, проверенные SHA, конституция веса
 - [karaoke-dream](https://github.com/rtynbirf/karaoke-dream) — Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.
 - [khozyain](https://github.com/rtynbirf/khozyain) — ХОЗЯИН ДОМА — аккаунт-уровневый автомат состояния: зелёные main, живые триггеры, ноль открытых состояний и ноль уведомлений. Слой 3 дома поверх repo-doctrine и domovoy-ritual
@@ -57,7 +59,7 @@
 - [ruvson](https://github.com/rtynbirf/ruvson) — КНИГА RUVSON
 - [ruvson-lyrics](https://github.com/rtynbirf/ruvson-lyrics) — RUVSON — тексты 65 треков: черновики, пайплайн, финальный ZIP
 - [ruvson-rse2](https://github.com/rtynbirf/ruvson-rse2) — RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.
-- [singulyar](https://github.com/rtynbirf/singulyar) — СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни × 200 языков · ОРКЕСТРАТОР ·15 · хаб + 45 дверей · PWA (офлайн, без слежки)
+- [singulyar](https://github.com/rtynbirf/singulyar) — СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни · 197 языков (цель 200) · ОРКЕСТРАТОР ·15 · хаб + 52 двери · PWA (офлайн, без слежки)
 - [singulyar-llm](https://github.com/rtynbirf/singulyar-llm) — Локальная модель СИНГУЛЯРА: Qwen2.5-0.5B-Instruct GGUF частями + инструкционный слой (ОБУЧЕНИЕ). Веса Apache-2.0, генерация — в браузере человека.
 - [task-graph-propagator](https://github.com/rtynbirf/task-graph-propagator) — Task Graph Engine: один пропагатор — все функции структуры графа задач (полукольца, Кана, критпуть, резервы, надёжность, крэшинг)
 - [uace](https://github.com/rtynbirf/uace) — КНИГА UACE
@@ -74,6 +76,6 @@
 <!-- токена не было: приватный срез недоступен, счёт см. линт -->
 
 ## Счёт
-- public: 64
+- public: 66
 - private: 0
-- total: 64
+- total: 66

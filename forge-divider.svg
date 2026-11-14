@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 46" width="1200" height="46"><line x1="40" y1="23" x2="524" y2="23" stroke="#77806B" stroke-width="1.2" opacity="0.85"/><line x1="676" y1="23" x2="1160" y2="23" stroke="#77806B" stroke-width="1.2" opacity="0.85"/><line x1="40" y1="14" x2="40" y2="32" stroke="#8A6D2F" stroke-width="1.4"/><line x1="1160" y1="14" x2="1160" y2="32" stroke="#8A6D2F" stroke-width="1.4"/><path d="M 524 17 L 530 23 L 524 29 L 518 23 Z" fill="#8A6D2F"/><path d="M 676 17 L 682 23 L 676 29 L 670 23 Z" fill="#8A6D2F"/><line x1="548" y1="13" x2="652" y2="13" stroke="#77806B" stroke-width="0.9" opacity="0.8"/><line x1="548" y1="18" x2="652" y2="18" stroke="#77806B" stroke-width="0.9" opacity="0.8"/><line x1="548" y1="23" x2="652" y2="23" stroke="#77806B" stroke-width="0.9" opacity="0.8"/><line x1="548" y1="28" x2="652" y2="28" stroke="#77806B" stroke-width="0.9" opacity="0.8"/><line x1="548" y1="33" x2="652" y2="33" stroke="#77806B" stroke-width="0.9" opacity="0.8"/><circle cx="584" cy="23" r="4.6" fill="#8A6D2F"/><circle cx="620" cy="13" r="4.6" fill="#8A6D2F"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 46" width="1200" height="46">
+  <defs>
+    <linearGradient id="gd__github" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#77806B" stop-opacity="0"/>
+      <stop offset="0.16" stop-color="#77806B"/>
+      <stop offset="0.84" stop-color="#77806B"/>
+      <stop offset="1" stop-color="#77806B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="40" y1="23" x2="540" y2="23" stroke="url(#gd__github)" stroke-width="1.6"/>
+  <line x1="660" y1="23" x2="1160" y2="23" stroke="url(#gd__github)" stroke-width="1.6"/>
+  <path d="M 600 8 L 615 23 L 600 38 L 585 23 Z" fill="#8A6D2F"/>
+  <path d="M 600 14 L 609 23 L 600 32 L 591 23 Z" fill="#A98F4C"/>
+  <path d="M 556 17 L 564 23 L 556 29 L 548 23 Z" fill="#8A6D2F" opacity="0.85"/>
+  <path d="M 644 17 L 652 23 L 644 29 L 636 23 Z" fill="#8A6D2F" opacity="0.85"/>
+  <line x1="40" y1="9" x2="40" y2="37" stroke="#8A6D2F" stroke-width="1.4" opacity="0.7"/>
+  <line x1="1160" y1="9" x2="1160" y2="37" stroke="#8A6D2F" stroke-width="1.4" opacity="0.7"/>
+</svg>

@@ -51,5 +51,7 @@ jobs:
             echo "фасад уже канон — красный линт был от rate-limit/сети, лечить нечего"
           else
             git commit -m "facade: автоген llms-account.txt — живой API (selfheal П36)"
+            # гонка с house-live за push (такт 2026-11-14 20:58 UTC — fetch first): ребейз — зуб (волна 12)
+            git pull --rebase origin main
             git push
           fi

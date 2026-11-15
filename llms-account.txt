@@ -1,9 +1,9 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-15 18:11 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-15 22:43 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (66)
+## Репозитории публичные (68)
 - [.github](https://github.com/rtynbirf/.github) — .github — дефолтные community health files
 - [agryp](https://github.com/rtynbirf/agryp) — agryp — неспящий супервизор агентов уровня PID 1
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
@@ -19,6 +19,7 @@
 - [edinyy-svod](https://github.com/rtynbirf/edinyy-svod) — ЕДИНЫЙ СВОД — Конституция Хозяина 4.2: основной закон стенда «ЕДИНЫЙ ХОЗЯИН», 98 статей, XIX глав, стенд singulyar_host v3.2. РЕВО В ОСНОВЕ ВСЕГО · REVE=РЕВО
 - [ekonomika](https://github.com/rtynbirf/ekonomika) — КНИГА ЭКОНОМИКИ
 - [ekspozicii](https://github.com/rtynbirf/ekspozicii) — КНИГА ЭКСПОЗИЦИЙ
+- [fond-host](https://github.com/rtynbirf/fond-host) — CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* для лестницы WebAudio плееров
 - [free-man](https://github.com/rtynbirf/free-man) — FREE MAN 0.2.2 — browser autonomy for Chrome MV3. 108 tracker/ads/CNAME domains blocked 100% on-device. No account, no cloud, no telemetry.
 - [github-doctrine](https://github.com/rtynbirf/github-doctrine) — КНИГА ДОКТРИНЫ
 - [github-runbook](https://github.com/rtynbirf/github-runbook) — Ранбук: настройка GitHub-репозитория человеком для человека — все флаги Settings, ветки и защита (Free vs Pro), безопасность, проверенная API-шпаргалка, журнал верификации
@@ -60,6 +61,7 @@
 - [ruvson-lyrics](https://github.com/rtynbirf/ruvson-lyrics) — RUVSON — тексты 65 треков: черновики, пайплайн, финальный ZIP
 - [ruvson-rse2](https://github.com/rtynbirf/ruvson-rse2) — RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.
 - [singulyar](https://github.com/rtynbirf/singulyar) — СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни · 197 языков (цель 200) · ОРКЕСТРАТОР ·15 · хаб + 52 двери · PWA (офлайн, без слежки)
+- [singulyar-a0-audit](https://github.com/rtynbirf/singulyar-a0-audit) — SINGULYAR × A0 — independent audit (PACKAGE VALID + BRIDGE VALID) and R4 port design
 - [singulyar-llm](https://github.com/rtynbirf/singulyar-llm) — Локальная модель СИНГУЛЯРА: Qwen2.5-0.5B-Instruct GGUF частями + инструкционный слой (ОБУЧЕНИЕ). Веса Apache-2.0, генерация — в браузере человека.
 - [task-graph-propagator](https://github.com/rtynbirf/task-graph-propagator) — Task Graph Engine: один пропагатор — все функции структуры графа задач (полукольца, Кана, критпуть, резервы, надёжность, крэшинг)
 - [uace](https://github.com/rtynbirf/uace) — КНИГА UACE
@@ -71,12 +73,11 @@
 - [windows-chronicle](https://github.com/rtynbirf/windows-chronicle) — Полная хроника Microsoft Windows 1985-2026: все версии, боли пользователей, продвижение, рейтинг двух полюсов
 - [yazyk-skvoz-epohi](https://github.com/rtynbirf/yazyk-skvoz-epohi) — Язык сквозь эпохи · Дом-Автомат v21 — семиэпохальное эссе, построенное как детерминированный конечный автомат (DFA). Seven epochs × seven cyrillic fonts × three story layers, shipped as a finite automaton.
 
-## Репозитории приватные (1)
+## Репозитории приватные (0)
 
-<!-- имена без описаний: фасад счёта, не содержимого -->
-- singulyar-a0-audit (private)
+<!-- токена не было: приватный срез недоступен, счёт см. линт -->
 
 ## Счёт
-- public: 66
-- private: 1
-- total: 67
+- public: 68
+- private: 0
+- total: 68

@@ -6,6 +6,9 @@
 # Пишет: index/projects.json (refs=HEAD SHA), index/LIVE.json, index/LIVE.md,
 #        .github/dosezor/live-ledger.jsonl (append-only), .github/dosezor/live-heartbeat.json.
 # Мембранный дозор: активное репо с непустым деревом без мембраны — добивает (лимит 3/прогон).
+# АРБИТРАЖ Н-8 (волна ×26, 2026-11-15): dependabot.yml исключён из мембраны — мембрана его
+# больше НЕ возвращает и НЕ удаляет; судьбу файла решает страж-гигиена по критерию
+# «есть ли workflow-файлы» (dependabot github_actions без воркфлоу = честно красный апдейтер).
 # Красные на default-ветке: 1 реран транзиента (<24ч, репо не в чужой волне), остальное — долг в LIVE.
 import base64, json, os, sys, time, urllib.request, urllib.error
 from datetime import datetime, timedelta, timezone
@@ -20,7 +23,11 @@ DEADLINE = time.time() + 9 * 60
 WAVE_HOURS = 2.0          # чужая живая волна
 RERUN_MAX_AGE_H = 24.0    # транзиент для рерана
 MEMBRANE_LIMIT = 3
-MEMBRANE_FILES = ("AGENTS.md", "SECURITY.md", "CODEOWNERS", "LICENSE", ".github/dependabot.yml")
+# Н-8 арбитраж: dependabot.yml — не мембранный файл. Осцилляция 14–15.11.2026:
+# гигиена сняла (9a116364/f115c2dd 21:39, 22303be0/c1b6b6ef 07:53 — «обновлениям нечего
+# брать»), мембрана вернула (5b269bed 21:45, f4814c9c/c8ec445e 10:42) → красный Update
+# 43705359727 / 43705363029 на пустом поле. Мембрана из боя вышла.
+MEMBRANE_FILES = ("AGENTS.md", "SECURITY.md", "CODEOWNERS", "LICENSE")
 MSGS = {
     "membrane": "docs: мембрана — AGENTS.md для агентов",
     "ssot": "chore(ssot): живая синхронизация refs/статусов (house-live)",
@@ -164,6 +171,8 @@ def main():
         for hole in membrane_holes[:MEMBRANE_LIMIT]:
             name = hole["repo"]
             for f in hole["missing"]:
+                if f.endswith("dependabot.yml"):
+                    continue  # арбитраж Н-8: не мембранная территория (см. шапку)
                 if f == "AGENTS.md":
                     text = agents_canon
                 elif f == "SECURITY.md":
@@ -172,8 +181,6 @@ def main():
                     text = f"# П-20/T21 мембрана: единственный Хозяин роя\n* @{OWNER}\n"
                 elif f == "LICENSE":
                     text = "MIT License\n\nCopyright (c) 2026 %s contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n" % name
-                else:
-                    text = 'version: 2\nupdates:\n  - package-ecosystem: "github-actions"\n    directory: "/"\n    schedule:\n      interval: "weekly"\n    groups:\n      actions:\n        patterns:\n          - "*"\n'
                 changed, _ = put_file(name, f, text, MSGS["membrane"])
                 if changed:
                     membrane_fixed.append(f"{name}/{f}")

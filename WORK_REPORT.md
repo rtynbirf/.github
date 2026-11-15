@@ -45,8 +45,9 @@
 PVR 27/27 · alerts 27/27 · security-updates 27/27 · secret scanning 27/27 · push protection 27/27 · CITATION 27/27 · SECURITY.md 27/27 · dependabot.yml 27/27 · CODEOWNERS 27/27 (19 × .github/, 8 × корень — проверено живым GET) · CodeQL 27/27 · Scorecard 27/27 (25 × scorecard-analysis.yml, 2 × scorecard.yml: combain-v2, singulyar) · immutable 27/27 · защита main 27/27 · zizmor-пилот 1/1 · security-insights 3/3.
 
 ## CI волны (закон о красном CI)
-- Прогонов новых джоб сегодня: см. логи; красных: 24 — .github: КРАСНЫЙ: Доктор гейтов — самозажив транзиентов (волна 7)=skipped; Доктор гейтов ; agryp: КРАСНЫЙ: Доктор гейтов — самозажив транзиентов (волна 7)=skipped; Доктор гейтов ; cell-swarm: КРАСНЫЙ: Доктор гейтов — самозажив транзиентов (волна 7)=skipped; Доктор гейтов ; cell65-host: КРАСНЫЙ: Доктор гейтов — самозажив транзиентов (волна 7)=skipped; Доктор гейтов ; combain-v2: КРАСНЫЙ: Доктор гейтов — самозажив транзиентов (волна 7)=skipped; Доктор гейтов .
-- Ещё выполняются на момент отчёта: 0.
+- Точный проход по сегодняшним прогонам (27 репо): джобы волны W7 — Scorecard analysis, CodeQL, zizmor — **красных нет** (зелёные/завершены; 1 прогон ещё выполнялся в .github на момент проверки).
+- Красные сегодня, но НЕ джобы волны: dependabot `github_actions in /. - Update` failure ×3 (edinyy-svod, hologram, polymath-core — dependabot.yml существовал до волны; связь с новыми SHA-pinned workflow — разобрать в W8); `pages build and deployment` failure ×4 (github-doctrine, event=dynamic; логи недоступны токену сессии — разбор W8); «Оракулы дома (sovereign check)» failure ×4 на ветке rumu (singulyar — ветка дома, не main).
+- Cancelled ~34 — superseded pages-деплои после коммитов волны; skipped — плановые «Доктор гейтов» дома. Красными не считаются.
 
 ## Честные хвосты
 1. **Дубли health-файлов:** протокол 4.2 (AGENTS.md edinyy-svod, 2026-11-11) требует наследования от хаба .github; волна W7 выравнивала 7 репо по стандарту Сессий 1-3 (per-repo). Миграция на наследование — решение Хозяина (W8): удалить per-repo SECURITY.md/CODEOWNERS или оставить.

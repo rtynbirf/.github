@@ -31,6 +31,9 @@ on:
       - "account-sentinel"
       - "ci"
       - "house-sweep · УБРАЛ (третий такт ритуала)"
+      - "house-live · цифры = территории (реального времени)"
+      - "РЕВО ОБХОД"
+      - "Workflow security lint (zizmor)"
     types: [completed]
 permissions:
   actions: write

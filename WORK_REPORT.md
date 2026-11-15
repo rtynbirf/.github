@@ -29,7 +29,7 @@
 66 репо = **38 архив** (весь флот до 2026-11-10, включая commons/polymath-os/uace-polymat/github-runbook/polimat-hub) + 1 форк (markitdown) + **27 активных**. Волна работала только по 27 активным не-форк не-архивным.
 
 ## Сделано (apply → verify живым GET, каждая задача)
-- **T-7002 PVR:** включён +0 () → GET 200 enabled=true.
+- **T-7002 PVR:** включён +15 (domovoy, door-zero, edinyy-svod, ekonomika, ekspozicii, free-man, github-doctrine, hologram, index, lean-canon, polymat-hive, polymath-core, ruvson, ruvson-lyrics, uace) → GET 200 enabled=true ×27/27 (итоговый verify).
 - **T-7003 vulnerability alerts:** +3 (door-zero, free-man, hologram) → GET 204.
 - **T-7004 Dependabot security updates:** PUT 204 ×27 → GET 200 {enabled:true}. ⚠️ Факт: GET automated-security-fixes в 2026 возвращает 200 с JSON, а не 204 — старый verify считал это «НЕТ».
 - **T-7005 secret scanning + push protection:** PATCH 200 ×27 → verify GET meta enabled ×27. Факт: поля security_and_analysis в GET /repos не отдаются, пока не сделан первый PATCH.

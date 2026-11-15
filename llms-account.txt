@@ -1,6 +1,6 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-14 20:59 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-15 18:11 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
 ## Репозитории публичные (66)
@@ -16,10 +16,10 @@
 - [domovoy-ritual](https://github.com/rtynbirf/domovoy-ritual) — Ритуал дома как конечный автомат: поработал → сделал → убрал за собой. S0-покой гарантирован. FSM: устав + исполняемый автомат (stdlib-only).
 - [domovoy-tweaker](https://github.com/rtynbirf/domovoy-tweaker) — ДОМОВОЙ / MEGA=TWEAKER — Windows tweaker as a state, not an event: change ledger, drift sentinel, per-feature undo, effect verification. PowerShell prototype.
 - [door-zero](https://github.com/rtynbirf/door-zero) — Door Zero: дверь без контента. PID 0 системы: удаление ломает boot. GET -> 204, POST/PUT -> 403 Void.
-- [edinyy-svod](https://github.com/rtynbirf/edinyy-svod) — ЕДИНЫЙ СВОД
+- [edinyy-svod](https://github.com/rtynbirf/edinyy-svod) — ЕДИНЫЙ СВОД — Конституция Хозяина 4.2: основной закон стенда «ЕДИНЫЙ ХОЗЯИН», 98 статей, XIX глав, стенд singulyar_host v3.2. РЕВО В ОСНОВЕ ВСЕГО · REVE=РЕВО
 - [ekonomika](https://github.com/rtynbirf/ekonomika) — КНИГА ЭКОНОМИКИ
 - [ekspozicii](https://github.com/rtynbirf/ekspozicii) — КНИГА ЭКСПОЗИЦИЙ
-- [free-man](https://github.com/rtynbirf/free-man) — FREE MAN — Browser Autonomy (Chrome MV3): local-first противослежащий близнец cell65-host. 72 трекер-домена, пауза по сайту, счётчик на иконке, стирание данных сайта, 7-дневный план самоосвобождения. Без аккаунта, сервера и телеметрии.
+- [free-man](https://github.com/rtynbirf/free-man) — FREE MAN 0.2.2 — browser autonomy for Chrome MV3. 108 tracker/ads/CNAME domains blocked 100% on-device. No account, no cloud, no telemetry.
 - [github-doctrine](https://github.com/rtynbirf/github-doctrine) — КНИГА ДОКТРИНЫ
 - [github-runbook](https://github.com/rtynbirf/github-runbook) — Ранбук: настройка GitHub-репозитория человеком для человека — все флаги Settings, ветки и защита (Free vs Pro), безопасность, проверенная API-шпаргалка, журнал верификации
 - [global-video-platforms-registry](https://github.com/rtynbirf/global-video-platforms-registry) — Верифицированный реестр 1071 видеоплатформ (1032 активных) — окт 2026. CSV/JSON/XLSX/PDF + методология + evidence
@@ -71,11 +71,12 @@
 - [windows-chronicle](https://github.com/rtynbirf/windows-chronicle) — Полная хроника Microsoft Windows 1985-2026: все версии, боли пользователей, продвижение, рейтинг двух полюсов
 - [yazyk-skvoz-epohi](https://github.com/rtynbirf/yazyk-skvoz-epohi) — Язык сквозь эпохи · Дом-Автомат v21 — семиэпохальное эссе, построенное как детерминированный конечный автомат (DFA). Seven epochs × seven cyrillic fonts × three story layers, shipped as a finite automaton.
 
-## Репозитории приватные (0)
+## Репозитории приватные (1)
 
-<!-- токена не было: приватный срез недоступен, счёт см. линт -->
+<!-- имена без описаний: фасад счёта, не содержимого -->
+- singulyar-a0-audit (private)
 
 ## Счёт
 - public: 66
-- private: 0
-- total: 66
+- private: 1
+- total: 67

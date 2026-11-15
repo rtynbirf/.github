@@ -25,6 +25,14 @@
 Состав: `ISSUE_TEMPLATE/` (bug + feature формы, config), `pull_request_template.md`,
 `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `ACCESSIBILITY.md`.
 
+## Карта репозитория
+
+- `ISSUE_TEMPLATE/` — формы bug + feature и `config.yml`.
+- `pull_request_template.md` — шаблон pull request.
+- `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `ACCESSIBILITY.md` — рамка сообщества.
+- `CHRONICLE.md` — хроника дома.
+- Файлы отсюда наследуют все 66 репо аккаунта, у которых нет собственной версии.
+
 <!--ФОРЖ:ПОДВАЛ-->
 ---
 

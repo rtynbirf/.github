@@ -137,3 +137,46 @@ Z.ai пропустил собственные audit-claims. Инструмен�
 После fix: 4/4 VALID. Референс: `lex-naturae/self-test-audit/`.
 
 **Правило: «готово» = lex-naturae valid=true. Не раньше.**
+
+
+---
+
+## КАНОН ПРОВЕРКИ CLAIMS — ОБЯЗАТЕЛЬНО для всех агентов
+
+**Мандат Хозяина 2026-11-16.** Полная процедура — в [`docs/КАНОН-ПРОВЕРКИ-CLAIMS.md`](docs/КАНОН-ПРОВЕРКИ-CLAIMS.md).
+
+### Правило (исполнимое, не декларативное)
+
+Прежде чем объявить любой результат («готово», «VALID», «PASS», «SUPPORTED»):
+
+1. **Структура (HUMAN-LFS):** записать claim как узел в `BUILD_GRAPH.json` с `source`, `status`, `falsification_or_revision_condition`, `depends_on`. Прогнать `python validate_graph.py`. Требуется: `STRUCTURE: PASS`.
+
+2. **Содержание (lex-naturae):** записать evidence в `claims.json` с `measurement_value` (CSV cell) или `excerpt` (verbatim из файла) + `raw_data_sha256`. Прогнать `python lex_naturae.py claims.json`. Требуется: `valid=true`.
+
+3. **Объявление:** оба PASS → можно объявить. Любой FAIL → `status=UNKNOWN`, результат не объявляется.
+
+### Что НЕ является PASS
+
+- «Тесты прошли» без evidence в lex-naturae формате → UNKNOWN
+- «STRUCTURE: PASS» без lex-naturae valid → структурный PASS, claim не подтверждён
+- «README говорит» → декларация
+- «SHA-256 совпадает» → целостность файла, не истинность
+
+### Референсы
+
+- HUMAN-LFS v0.4: `singulyar-a0-audit/human-lfs/v0.4/` (36/36 tests)
+- lex-naturae v0.7: `lex-naturae` repo (70/70 tests)
+- Z.ai self-test: `lex-naturae/self-test-audit/` (4/4 claims valid)
+- Ecosystem inventory: `singulyar-a0-audit/ecosystem-inventory/` (lex-naturae valid)
+
+### Минимальный пакет агента
+
+```
+my-claim/
+├── BUILD_GRAPH.json     # HUMAN-LFS узел
+├── evidence/            # CSV + логи
+├── claims.json          # lex-naturae collection
+└── run_check.sh         # validate_graph.py && lex_naturae.py
+```
+
+**«Готово» = STRUCTURE PASS + lex-naturae valid=true. Не раньше. Не вместо.**

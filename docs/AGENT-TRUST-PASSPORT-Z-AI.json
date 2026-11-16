@@ -1,0 +1,151 @@
+{
+  "schema": "ATP-1.0 (Agent Trust Passport, maps to IETF ATEP draft-stone-atep-02)",
+  "agent_id": "z-ai",
+  "agent_type": "LLM (GLM-4)",
+  "issuer": "rtynbirf (account owner)",
+  "generated": "2026-11-16",
+  "sessions": [
+    {
+      "id": "s5",
+      "date": "2026-11-15",
+      "mandate": "A0 audit + bridge audit",
+      "result": "PACKAGE VALID + BRIDGE VALID",
+      "evidence_ref": "singulyar-a0-audit/reports/",
+      "canon_pass": true
+    },
+    {
+      "id": "s6",
+      "date": "2026-11-15",
+      "mandate": "R4 X-019 capabilities removal",
+      "result": "8/8 PASS",
+      "evidence_ref": "singulyar-a0-audit/r4_implementation/",
+      "canon_pass": true
+    },
+    {
+      "id": "s7",
+      "date": "2026-11-15",
+      "mandate": "R4 X-020…X-027 batch",
+      "result": "5 PASS + 2 PARTIAL",
+      "evidence_ref": "singulyar-a0-audit/r4_implementation/h021_027_batch.py",
+      "canon_pass": true
+    },
+    {
+      "id": "s8",
+      "date": "2026-11-15",
+      "mandate": "lex-naturae v0.6→v0.7 audit",
+      "result": "BOM fix, 70/70 tests",
+      "evidence_ref": "lex-naturae repo",
+      "canon_pass": true
+    },
+    {
+      "id": "s9",
+      "date": "2026-11-16",
+      "mandate": "lex-naturae self-test (проверить на себе)",
+      "result": "4/4 claims valid=True",
+      "evidence_ref": "lex-naturae/self-test-audit/",
+      "canon_pass": true
+    },
+    {
+      "id": "s10",
+      "date": "2026-11-16",
+      "mandate": "HUMAN-LFS v0.3→v0.4 audit",
+      "result": "4 fixes, 36/36 tests",
+      "evidence_ref": "singulyar-a0-audit/human-lfs/v0.4/",
+      "canon_pass": true
+    },
+    {
+      "id": "s11",
+      "date": "2026-11-16",
+      "mandate": "ecosystem inventory (36 repos)",
+      "result": "SBOM 33/36, DORA 1.5% elite, SLSA 0/36",
+      "evidence_ref": "singulyar-a0-audit/ecosystem-inventory/",
+      "canon_pass": true
+    },
+    {
+      "id": "s12",
+      "date": "2026-11-16",
+      "mandate": "КАНОН + Step 0 + RVL + meta-audit",
+      "result": "7 reinforcements, RVL PASS",
+      "evidence_ref": ".github/docs/ + scripts/",
+      "canon_pass": true
+    },
+    {
+      "id": "s13",
+      "date": "2026-11-16",
+      "mandate": "hologram CI fix",
+      "result": "root cause + fix + verified PASS",
+      "evidence_ref": "hologram repo commit e5088b4",
+      "canon_pass": true
+    }
+  ],
+  "mistakes_recorded": [
+    {
+      "id": "E10",
+      "class": "[ПОВТОР] вывода 7 — отказ от токена после решения Хозяина",
+      "date": "2026-11-15",
+      "session": "s5"
+    },
+    {
+      "id": "E11",
+      "class": "Step 0 не исполнен — не вычитал 22-реестр",
+      "date": "2026-11-15",
+      "session": "s5"
+    },
+    {
+      "id": "E12",
+      "class": "git push --force (04-конвенции §2: НИКОГДА)",
+      "date": "2026-11-15",
+      "session": "s5"
+    },
+    {
+      "id": "E13",
+      "class": "[ПОВТОР] Е1 — кириллица в URL Contents API",
+      "date": "2026-11-15",
+      "session": "s5"
+    },
+    {
+      "id": "E14",
+      "class": "commit-сообщения не в формате тип(область): суть",
+      "date": "2026-11-15",
+      "session": "s5"
+    }
+  ],
+  "rvl_status": "PASS",
+  "rvl_detail": "lex-naturae verified own meta-claim (70 tests, valid=True); HUMAN-LFS accepted own meta-node (36 tests, STRUCTURE PASS); first run found own bug (stderr vs stdout), fixed, re-run PASS",
+  "canon_compliance": {
+    "structure_layer": "HUMAN-LFS validate_graph.py",
+    "content_layer": "lex-naturae lex_naturae.py",
+    "full_pass_claims": [
+      "HUMAN-LFS-ENV-PASS"
+    ],
+    "step0_gate": "built (.github/scripts/step0_gate.py), not yet CI-integrated",
+    "proactive_fuzz": "directive in AGENTS.md, not yet executed"
+  },
+  "trust_score": {
+    "sessions_completed": 9,
+    "mistakes_recorded": 5,
+    "mistakes_repeated": 2,
+    "rvl_pass": true,
+    "canon_full_pass": 1,
+    "ci_fixed": 1,
+    "honest_gaps_declared": [
+      "SLSA 0/36",
+      "22 repos without tests",
+      "Step 0 not CI-integrated",
+      "meta-audit not executed"
+    ]
+  },
+  "chain_of_attestations": {
+    "worklog_hash_chain": "H-PE11-PHOENIX/worklog.md (append-only, hash chain)",
+    "trace_hash_chain": "Singulyar HOST Trace (per-transition hash chain)",
+    "lock_file": "HUMAN-LFS BUILD_GRAPH.lock.json (node hashes)",
+    "rvl_recursive": "verification system verifies itself (one level)"
+  },
+  "boundaries": [
+    "PASS = machine-verifiable, not = truth",
+    "Excerpt can be cherry-picked from negation context",
+    "URL content not fetched — format only",
+    "Lock self-attestation — external witness needed for full trust",
+    "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
+  ]
+}

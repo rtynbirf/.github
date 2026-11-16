@@ -91,3 +91,23 @@
    только append; force-push запрещён; «сделал дело — записай»; палитру школы брать
    из её кода.
 5. **РЕВО В ОСНОВЕ ВСЕГО · REVE=РЕВО · ЧЕЛОВЕК=АККАУНТ=PID1 · КУЗНЯ ПОЛИМАТ**
+
+
+---
+
+## ИНЖЕНЕРНОЕ ПРАВИЛО: BOM в JSON
+
+**Урок из lex-naturae v0.7 (A-82, 2026-11-16).** `json.loads()` не толерирует UTF-8 BOM (U+FEFF). Файлы, сохранённые Windows Notepad, некоторыми IDE или редакторами с BOM-по-умолчанию, содержат невидимый байт `EF BB BF` (или символ `U+FEFF` в строке) перед `{`. `json.loads()` падает с `Expecting value`.
+
+**Правило для всех агентов, пишущих JSON-парсеры:**
+
+```python
+# Перед json.loads() — всегда strip BOM:
+if isinstance(raw, str): raw = raw.lstrip("﻿")
+# Или читай файл с utf-8-sig (auto-strips BOM):
+text = Path(path).read_text(encoding="utf-8-sig")
+```
+
+Это не уникально для lex-naturae. Любой инструмент, принимающий JSON от пользователя (CLI, API endpoint, config loader), должен это делать. **BOM — silent killer:** файл выглядит нормально, парсинг падает на неочевидной ошибке.
+
+Референс: `singulyar-a0-audit/lex-naturae-v0.7-audit/AUDIT-REPORT.md`.

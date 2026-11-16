@@ -212,3 +212,21 @@ python /path/to/.github/scripts/step0_gate.py --check
 4. Если bypass — повтор → отметь [ПОВТОР] (сигнал: Step 0 не исполнялся).
 
 **Не «тесты прошли» — а «тесты поймали то, для чего не были написаны.»**
+
+
+---
+
+## RVL — RECURSIVE VERIFICATION LOOP
+
+**Эмерджентное.** Verification infrastructure files claims about itself, then validates.
+
+```bash
+python .github/scripts/recursive_verify_loop.py
+```
+
+- **PASS** → система верифицирует себя (один уровень рекурсии). Trust preserved.
+- **FAIL** → система нашла свой gap. Записать в ЛЕТОПИСЬ, починить, перегнать.
+
+**RVL — не копия мирового тренда.** LLM self-verification (NeurIPS 2026) проверяет reasoning. RVL проверяет verification rules + evidence format. Рост из нашей комбинации: КАНОН + храповик + Step 0 + fuzz + meta-audit.
+
+Документация: [`docs/RVL-RECURSIVE-VERIFICATION-LOOP.md`](docs/RVL-RECURSIVE-VERIFICATION-LOOP.md)

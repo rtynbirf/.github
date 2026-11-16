@@ -23,7 +23,9 @@ TODAY = date.today().isoformat()
 
 def run(cmd, cwd=None):
     r = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, timeout=30)
-    return r.returncode, r.stdout.strip(), r.stderr.strip()
+    # FIX (RVL first run found this): unittest writes to stderr, not stdout
+    combined = (r.stdout + "\n" + r.stderr).strip()
+    return r.returncode, combined, ""
 
 # === Layer 1: lex-naturae files claim about lex-naturae ===
 def lex_naturae_self_claim():

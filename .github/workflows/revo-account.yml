@@ -1,0 +1,23 @@
+name: РЕВО АККАУНТ
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  account:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: ковка паспорта аккаунта
+        run: python3 revo_account.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: самозапись изменений
+        run: |
+          git config user.name "revo[bot]"
+          git config user.email "revo[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "автопилот РЕВО: паспорт аккаунта перекован — REVE=РЕВО"
+          git push

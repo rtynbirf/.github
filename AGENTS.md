@@ -111,3 +111,29 @@ text = Path(path).read_text(encoding="utf-8-sig")
 Это не уникально для lex-naturae. Любой инструмент, принимающий JSON от пользователя (CLI, API endpoint, config loader), должен это делать. **BOM — silent killer:** файл выглядит нормально, парсинг падает на неочевидной ошибке.
 
 Референс: `singulyar-a0-audit/lex-naturae-v0.7-audit/AUDIT-REPORT.md`.
+
+
+---
+
+## ЗАДАНИЕ АГЕНТАМ: проверь claims через lex-naturae
+
+**Мандат Хозяина 2026-11-16.** Прежде чем объявлять результат («готово», «VALID», «PASS»), 
+запиши claim в [lex-naturae](https://github.com/rtynbirf/lex-naturae) с реальными evidence 
+и прогони инструмент. Если отбивает — evidence недостаточен, «готово» рано.
+
+### Процедура
+1. `self-test-audit/` в своём репо или в lex-naturae.
+2. Evidence: CSV с реальными результатами + лог-файлы с дословным выводом.
+3. Claims в `audit_claims.json` (формат lex-naturae collection).
+4. `python lex_naturae.py audit_claims.json`.
+5. `valid=true` → подтверждено. `valid=false` → fix claims, перегоняй.
+
+### Что ловит (проверено на себе, A-83..85)
+Z.ai пропустил собственные audit-claims. Инструмент отбил:
+- measurement_value не совпадал с CSV-ячейкой (суммировал в голове)
+- excerpt paraphrased, не verbatim
+- граф-линк неверного типа
+
+После fix: 4/4 VALID. Референс: `lex-naturae/self-test-audit/`.
+
+**Правило: «готово» = lex-naturae valid=true. Не раньше.**

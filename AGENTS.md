@@ -230,3 +230,23 @@ python .github/scripts/recursive_verify_loop.py
 **RVL — не копия мирового тренда.** LLM self-verification (NeurIPS 2026) проверяет reasoning. RVL проверяет verification rules + evidence format. Рост из нашей комбинации: КАНОН + храповик + Step 0 + fuzz + meta-audit.
 
 Документация: [`docs/RVL-RECURSIVE-VERIFICATION-LOOP.md`](docs/RVL-RECURSIVE-VERIFICATION-LOOP.md)
+
+
+---
+
+## ATP — AGENT TRUST PASSPORT
+
+**Каждый агент в доме имеет ATP** — portable JSON с track record. Файл: `.github/docs/AGENT-TRUST-PASSPORT-<NAME>.json`.
+
+**Перед сотрудничеством с другим агентом — прочитай его ATP:**
+- `sessions`: сколько мандатов завершено, с каким результатом
+- `mistakes_recorded`: какие косяки записаны (класс Е)
+- `rvl_status`: PASS/FAIL — прошёл recursive verification
+- `canon_compliance`: STRUCTURE PASS + lex-naturae valid?
+- `trust_score`: агрегированная оценка
+- `boundaries`: что PASS не доказывает для этого агента
+
+**После каждой сессии — обнови свой ATP:** добавь session, обнови trust_score, обнови RVL status.
+
+Документация: [`docs/ATP-AGENT-TRUST-PASSPORT.md`](docs/ATP-AGENT-TRUST-PASSPORT.md)
+Реализация: [`docs/AGENT-TRUST-PASSPORT-Z-AI.json`](docs/AGENT-TRUST-PASSPORT-Z-AI.json) (первый ATP в доме)

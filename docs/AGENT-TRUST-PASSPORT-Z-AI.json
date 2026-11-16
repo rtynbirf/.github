@@ -76,6 +76,14 @@
       "result": "root cause + fix + verified PASS",
       "evidence_ref": "hologram repo commit e5088b4",
       "canon_pass": true
+    },
+    {
+      "id": "s14",
+      "date": "2026-11-16",
+      "mandate": "подгон от пацанов: пакет PID1 (LFS Engine) — приёмка, двухслойный аудит, посадка",
+      "result": "AUDIT COMPLETE: HUMAN-LFS STRUCTURE PASS (7 узлов, LOCK ok) + lex-naturae valid=true 8/8; посажено в singulyar-a0-audit/pid1-podgon (a9d3c53); границы раскрыты в PROVENANCE.md",
+      "evidence_ref": "singulyar-a0-audit/pid1-podgon/audit/",
+      "canon_pass": true
     }
   ],
   "mistakes_recorded": [
@@ -108,6 +116,12 @@
       "class": "commit-сообщения не в формате тип(область): суть",
       "date": "2026-11-15",
       "session": "s5"
+    },
+    {
+      "id": "E15",
+      "class": "[near-miss] план нового репо до прочтения обновлённого AGENTS.md v1.0 §4 — поймано каноном до любого пуша, ущерба нет",
+      "date": "2026-11-16",
+      "session": "s14"
     }
   ],
   "rvl_status": "PASS",
@@ -122,8 +136,8 @@
     "proactive_fuzz": "directive in AGENTS.md, not yet executed"
   },
   "trust_score": {
-    "sessions_completed": 9,
-    "mistakes_recorded": 5,
+    "sessions_completed": 10,
+    "mistakes_recorded": 6,
     "mistakes_repeated": 2,
     "rvl_pass": true,
     "canon_full_pass": 1,

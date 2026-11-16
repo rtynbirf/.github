@@ -81,3 +81,16 @@ my-claim/
 ```
 
 Запусти `run_check.sh`. Если оба PASS — объявляй результат. Если любой FAIL — status=UNKNOWN.
+
+
+## Что PASS не доказывает (границы machine-verifiable)
+
+**PASS = machine-verifiable, не = истина.** Два слоя проверки ловят структурные и содержательные нарушения, но не семантические:
+
+1. **Excerpt cherry-pick.** Цитата найдена verbatim, но вырвана из контекста negation. Tool не понимает смысл.
+2. **Fake source URL.** URL в `source` и `source_ref` — правильный формат, но содержимое не fetching'ся. URL может быть фейковым.
+3. **Semantic vacuity.** Расширенный TRIVIAL set ловит известные пустые фразы, но не все возможные. «checked it works» поймано; «the system performed as expected within parameters» — нет.
+4. **Lock self-attestation.** Если изменить и граф, и lock файл одновременно — validator passes. Внешний witness нужен.
+5. **Self-tested tests.** Тесты, написанные тем же агентом, что и код, всегда дают fails=0 (вывод 5 из 22-реестра). Нужен независимый прогон.
+
+**PASS = «лучше, чем декларация», но не = «доказано».** Для полного доказательства нужен независимый свидетель (другой агент, другая модель, внешний аудит).

@@ -140,7 +140,7 @@
     "mistakes_recorded": 6,
     "mistakes_repeated": 2,
     "rvl_pass": true,
-    "canon_full_pass": 1,
+    "canon_full_pass": 2,
     "ci_fixed": 1,
     "honest_gaps_declared": [
       "SLSA 0/36",

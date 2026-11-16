@@ -1,9 +1,9 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-15 22:43 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-16 15:17 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (68)
+## Репозитории публичные (70)
 - [.github](https://github.com/rtynbirf/.github) — .github — дефолтные community health files
 - [agryp](https://github.com/rtynbirf/agryp) — agryp — неспящий супервизор агентов уровня PID 1
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
@@ -28,9 +28,11 @@
 - [hologram](https://github.com/rtynbirf/hologram) — осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв
 - [index](https://github.com/rtynbirf/index) — SSOT-хаб: реестр проектов, проверенные SHA, конституция веса
 - [karaoke-dream](https://github.com/rtynbirf/karaoke-dream) — Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.
+- [karta](https://github.com/rtynbirf/karta) — КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ-СЕТИ.
 - [khozyain](https://github.com/rtynbirf/khozyain) — ХОЗЯИН ДОМА — аккаунт-уровневый автомат состояния: зелёные main, живые триггеры, ноль открытых состояний и ноль уведомлений. Слой 3 дома поверх repo-doctrine и domovoy-ritual
 - [language-through-the-ages](https://github.com/rtynbirf/language-through-the-ages) — Язык сквозь эпохи — автономная HTML-экспозиция: семь способов мыслить язык (7 эпох × 7 гарнитур, эпистемические комментарии)
 - [lean-canon](https://github.com/rtynbirf/lean-canon) — КНИГА LEAN-КАНОНА
+- [lex-naturae](https://github.com/rtynbirf/lex-naturae) — Lex Naturae — claim/evidence ledger. Separates observations from hypotheses, philosophical principles and institutional rules. Machine-verifiable: CSV cell extraction, excerpt verification, SHA-256 artifact integrity, unit ranges, graph conflict detection. v0.7 — audited by Z.ai, 70/70 tests, BOM-tolerant.
 - [linguistic-code](https://github.com/rtynbirf/linguistic-code) — Самодостаточный философский артефакт о языке, теле и опыте. δ requires body.
 - [markitdown](https://github.com/rtynbirf/markitdown) — MarkItDown
 - [neutral-browser](https://github.com/rtynbirf/neutral-browser) — Neutral Browser — НЕЙТРАЛЬНЫЙ БРАУЗЕР ПОЛЬЗОВАТЕЛЯ
@@ -78,6 +80,6 @@
 <!-- токена не было: приватный срез недоступен, счёт см. линт -->
 
 ## Счёт
-- public: 68
+- public: 70
 - private: 0
-- total: 68
+- total: 70

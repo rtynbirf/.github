@@ -130,7 +130,8 @@
     "structure_layer": "HUMAN-LFS validate_graph.py",
     "content_layer": "lex-naturae lex_naturae.py",
     "full_pass_claims": [
-      "HUMAN-LFS-ENV-PASS"
+      "HUMAN-LFS-ENV-PASS",
+      "PID1-PODGON-AUDIT-PASS"
     ],
     "step0_gate": "built (.github/scripts/step0_gate.py), not yet CI-integrated",
     "proactive_fuzz": "directive in AGENTS.md, not yet executed"

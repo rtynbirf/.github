@@ -69,7 +69,7 @@ def render_account(f):
                  f'<text y="4.5" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{gold2}">{v}</text>'
                  f'<text y="44" text-anchor="middle" font-family="{MONO}" font-size="9.5" fill="{dim}" letter-spacing="2">{lab}</text></g>')
     lx = f["topics"][:4]
-    cx = 64
+    cx = 460
     for w in lx:
         cw = int(len(w) * 9.2 + 24)
         e.append(f'<rect x="{cx}" y="318" width="{cw}" height="22" fill="none" stroke="{gold2}" stroke-width="0.9"/>'
@@ -85,7 +85,7 @@ def render_account(f):
         op = 0.9 if alive else 0.28
         e.append(f'<rect x="{tx}" y="{ty}" width="{tw}" height="{th}" fill="{fillc}" opacity="{op}" rx="2"/>')
         e.append(f'<text x="{tx+tw/2:.0f}" y="{ty+14}" text-anchor="middle" font-family="{MONO}" font-size="9" fill="{bg2}">{num}</text>')
-    e.append(f'<text x="{x0}" y="{y0 + 8*(th+gy) + 18}" font-family="{MONO}" font-size="9.5" fill="{dim}" letter-spacing="2">● ЖИВЫЕ МАСТЕРСКИЕ ○ АРХИВ · НОМЕР = № ПОЛОТНА</text>')
+    e.append(f'<text x="{x0}" y="{y0 + 8*(th+gy) + 18}" font-family="{MONO}" font-size="9.5" fill="{dim}" letter-spacing="2">■ ЖИВЫЕ МАСТЕРСКИЕ · □ АРХИВ · НОМЕР = № ПОЛОТНА</text>')
     e.append(f'<line x1="64" y1="348" x2="1216" y2="348" stroke="{gold}" stroke-width="0.6" opacity="0.5"/>')
     e.append(f'<text x="640" y="371" text-anchor="middle" font-family="{MONO}" font-size="10.5" fill="{dim}" letter-spacing="2">'
              f'ОБНОВЛЕНО {esc(f["last_push"])} · РЕВО В ОСНОВЕ ВСЕГО · REVE=РЕВО · ЧЕЛОВЕК=АККАУНТ=PID1</text>')

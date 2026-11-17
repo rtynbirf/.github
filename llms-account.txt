@@ -1,14 +1,15 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-16 15:17 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-17 19:29 UTC · источник: живой GitHub API (public:/users/rtynbirf/repos (public only)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (70)
+## Репозитории публичные (73)
 - [.github](https://github.com/rtynbirf/.github) — .github — дефолтные community health files
 - [agryp](https://github.com/rtynbirf/agryp) — agryp — неспящий супервизор агентов уровня PID 1
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
 - [cell-swarm](https://github.com/rtynbirf/cell-swarm) — РОЙ (Cell Swarm) — сингулярная эмерджентная архитектура: клетка, окно, указатели, храповик, семя
 - [cell65-host](https://github.com/rtynbirf/cell65-host) — cell65-host — Антицензор (Chrome MV3): PAC/DNR/WebRTC-защита, hosts-блокировка, обход блокировок
+- [code](https://github.com/rtynbirf/code) — Код дома: скрипты и снипеты — место по канону §4
 - [combain-v2](https://github.com/rtynbirf/combain-v2) — COMBAIN v2 — self-hosted messenger
 - [commons](https://github.com/rtynbirf/commons) — COMMONS — один организм из лучших открытых проектов: геном-спеки, синапсы MCP, кровь событий, иммунитет-лицензии. Органы остаются на upstream — единым становится обмен. ЦЕЛОЕ = ЧЕЛОВЕК > суммы частей. Провенанс: здесь нет ни байта чужого (REUSE 3.3).
 - [domovenok](https://github.com/rtynbirf/domovenok) — 🏠 Командный центр дома: задачи, комнаты, расходы и индекс порядка. Next.js 16 · TypeScript · Prisma · Vitest · зелёный CI
@@ -27,8 +28,10 @@
 - [H-PE11-PHOENIX](https://github.com/rtynbirf/H-PE11-PHOENIX) — PHOENIX-11: ворклог операций TH-* (журнал неповторимых результатов), сборки WinPE, сессии. Правила ведения — в rtynbirf/repo-doctrine.
 - [hologram](https://github.com/rtynbirf/hologram) — осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв
 - [index](https://github.com/rtynbirf/index) — SSOT-хаб: реестр проектов, проверенные SHA, конституция веса
+- [invariant-manifest](https://github.com/rtynbirf/invariant-manifest) — МАНИФЕСТ ИНВАРИАНТА · FORK 3 · v0.2.3 · CONDITIONAL PASS · seed 7170 · stdlib-only · порождение должно мочь быть опровергнутым
 - [karaoke-dream](https://github.com/rtynbirf/karaoke-dream) — Браузерное караоке мечты: неон, гид-вокал, оценка голоса в реальном времени и Зелёный коридор — тональность подстраивается под певца. Vanilla JS + WebAudio, zero-dependency.
 - [karta](https://github.com/rtynbirf/karta) — КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ-СЕТИ.
+- [kb](https://github.com/rtynbirf/kb) — Знания дома: канон-тексты, гайды, досье — место по канону §4
 - [khozyain](https://github.com/rtynbirf/khozyain) — ХОЗЯИН ДОМА — аккаунт-уровневый автомат состояния: зелёные main, живые триггеры, ноль открытых состояний и ноль уведомлений. Слой 3 дома поверх repo-doctrine и domovoy-ritual
 - [language-through-the-ages](https://github.com/rtynbirf/language-through-the-ages) — Язык сквозь эпохи — автономная HTML-экспозиция: семь способов мыслить язык (7 эпох × 7 гарнитур, эпистемические комментарии)
 - [lean-canon](https://github.com/rtynbirf/lean-canon) — КНИГА LEAN-КАНОНА
@@ -80,6 +83,6 @@
 <!-- токена не было: приватный срез недоступен, счёт см. линт -->
 
 ## Счёт
-- public: 70
+- public: 73
 - private: 0
-- total: 70
+- total: 73

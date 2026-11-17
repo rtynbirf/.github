@@ -84,6 +84,14 @@
       "result": "AUDIT COMPLETE: HUMAN-LFS STRUCTURE PASS (7 узлов, LOCK ok) + lex-naturae valid=true 8/8; посажено в singulyar-a0-audit/pid1-podgon (a9d3c53); границы раскрыты в PROVENANCE.md",
       "evidence_ref": "singulyar-a0-audit/pid1-podgon/audit/",
       "canon_pass": true
+    },
+    {
+      "id": "s14",
+      "date": "2026-11-17",
+      "mandate": "invariant-manifest: PARTIAL→PASS",
+      "result": "PASS 30/30, 8/8 mutations, W3 semantic judge",
+      "evidence_ref": "invariant-manifest repo commit 279cc79",
+      "canon_pass": true
     }
   ],
   "mistakes_recorded": [
@@ -122,6 +130,48 @@
       "class": "[near-miss] план нового репо до прочтения обновлённого AGENTS.md v1.0 §4 — поймано каноном до любого пуша, ущерба нет",
       "date": "2026-11-16",
       "session": "s14"
+    },
+    {
+      "id": "Е15",
+      "class": "Step 0 gate не запущен перед операцией",
+      "date": "2026-11-17",
+      "session": "s14"
+    },
+    {
+      "id": "Е16",
+      "class": "КАНОН не прогнан (PASS без обоих слоёв)",
+      "date": "2026-11-17",
+      "session": "s14"
+    },
+    {
+      "id": "Е17",
+      "class": "ЛЕТОПИСЬ не записана тем же тактом",
+      "date": "2026-11-17",
+      "session": "s14"
+    },
+    {
+      "id": "Е18",
+      "class": "Worklog TH-* не записан",
+      "date": "2026-11-17",
+      "session": "s14"
+    },
+    {
+      "id": "Е19",
+      "class": "ATP не обновлён",
+      "date": "2026-11-17",
+      "session": "s14"
+    },
+    {
+      "id": "Е20",
+      "class": "AUDIT-*.md не создан",
+      "date": "2026-11-17",
+      "session": "s14"
+    },
+    {
+      "id": "Е21",
+      "class": "Косяки не записаны в реестр",
+      "date": "2026-11-17",
+      "session": "s14"
     }
   ],
   "rvl_status": "PASS",
@@ -138,16 +188,17 @@
   },
   "trust_score": {
     "sessions_completed": 10,
-    "mistakes_recorded": 6,
-    "mistakes_repeated": 2,
+    "mistakes_recorded": 12,
+    "mistakes_repeated": 3,
     "rvl_pass": true,
     "canon_full_pass": 2,
-    "ci_fixed": 1,
+    "ci_fixed": 2,
     "honest_gaps_declared": [
       "SLSA 0/36",
       "22 repos without tests",
       "Step 0 not CI-integrated",
-      "meta-audit not executed"
+      "meta-audit not executed",
+      "7 rule violations in session s14 (Е15-Е21)"
     ]
   },
   "chain_of_attestations": {

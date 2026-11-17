@@ -14,10 +14,38 @@ jobs:
         run: python3 revo_account.py
         env:
           GITHUB_TOKEN: ${{ github.token }}
-      - name: самозапись изменений
+      - name: самозапись изменений (патч + 3-way apply, 5 попыток)
         run: |
           git config user.name "revo[bot]"
           git config user.email "revo[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || git commit -m "автопилот РЕВО: паспорт аккаунта перекован — REVE=РЕВО"
-          git push
+          if git diff --cached --quiet; then
+            echo "паспорт аккаунта не изменился — писать нечего"
+            exit 0
+          fi
+          git diff --cached > /tmp/revo.patch
+          git reset --hard -q HEAD
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main --quiet || true
+            git reset --hard -q origin/main
+            if git apply --3way /tmp/revo.patch 2>/dev/null; then
+              git add -A
+              if git diff --cached --quiet; then
+                echo "патч уже лежит на main — записывать нечего (попытка $attempt)"
+                pushed=1
+                break
+              fi
+              git commit -q -m "автопилот РЕВО: паспорт аккаунта перекован — REVE=РЕВО"
+              if git push --quiet; then
+                echo "запись легла с попытки $attempt"
+                pushed=1
+                break
+              fi
+              echo "гонка за main: территория ушла во время записи — перечитать и повторить (попытка $attempt)"
+            else
+              echo "патч не лег на свежий main без конфликта — попытка $attempt"
+            fi
+            sleep 15
+          done
+          [ "$pushed" -eq 1 ] || { echo "main не принял запись за 5 попыток — честный красный"; exit 1; }

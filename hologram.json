@@ -2,7 +2,7 @@
  "hologram": 1,
  "root": "c223bd4a2f6a56783c1fbdb1b1f671fa61c3150ecf320c82796ea5763043a696",
  "n": 73,
- "storage": 68,
+ "storage": 36,
  "r": 3,
  "self": {
   "name": ".github",
@@ -316,6 +316,30 @@
    "desc": "Верифицированный реестр 1071 видеоплатформ (1032 активных) — окт 2026. CSV/JSON/XLSX/PDF + методология + evidence",
    "lang": "Python",
    "cluster": "ATLASES"
+  },
+  {
+   "name": "polymath-atlas",
+   "desc": "Operational System Atlas - Lean 4 Gestalt audit: 7 modules, zero sorry, verbatim imperial session archive",
+   "lang": "Python",
+   "cluster": ""
+  },
+  {
+   "name": "polymath-core",
+   "desc": "КНИГА ПОЛИМАТ-ЯДРА",
+   "lang": "Python",
+   "cluster": ""
+  },
+  {
+   "name": "polymath-stckg-core",
+   "desc": "ST-CKG → Lean 4 bridge contract: 11 machine-verified theorems, 0 sorry, kernel-audited axiom surface. GATE 7R runs as CI — the contract defends itself.",
+   "lang": "Lean",
+   "cluster": ""
+  },
+  {
+   "name": "runtime-protocol",
+   "desc": "Клетка роя cell-swarm: исполнимая модель динамики узла (уравнение ρ̇, GENESIS_EXEC, VOLATILE_META, CANCER_FILTER). stdlib-only, офлайн.",
+   "lang": "Python",
+   "cluster": "SWARM"
   },
   {
    "name": "universal-agent",

@@ -9,6 +9,9 @@ on:
   push:
     branches: ["**"]
   workflow_dispatch:
+concurrency:
+  group: revo-obhod
+  cancel-in-progress: false
 permissions:
   contents: write
   issues: write

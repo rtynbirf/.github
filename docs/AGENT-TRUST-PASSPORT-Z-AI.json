@@ -3,7 +3,7 @@
   "agent_id": "z-ai",
   "agent_type": "LLM (GLM-4)",
   "issuer": "rtynbirf (account owner)",
-  "generated": "2026-11-16",
+  "generated": "2026-11-18",
   "sessions": [
     {
       "id": "s5",
@@ -91,6 +91,14 @@
       "mandate": "invariant-manifest: PARTIAL→PASS",
       "result": "PASS 30/30, 8/8 mutations, W3 semantic judge",
       "evidence_ref": "invariant-manifest repo commit 279cc79",
+      "canon_pass": true
+    },
+    {
+      "id": "s15",
+      "date": "2026-11-18",
+      "mandate": "revo: волна 18 — закрыта фаза M6 (F-27 мозг>8 зон + F-28 layout-streaming); ответ на вопрос хозяина «почему REVO не сделан»",
+      "result": "F-27/F-28 ГОТОВО; selftest 24/24; смоук 36/0; claims lex-naturae valid=true 7/7, exit 0; 12 raw 200; commit 0e66e0d; CI+АВТОПИЛОТ запущены",
+      "evidence_ref": "revo repo commit 0e66e0d · self-test-audit/m6-wave/ (CSV+логи+claims)",
       "canon_pass": true
     }
   ],
@@ -187,11 +195,11 @@
     "proactive_fuzz": "directive in AGENTS.md, not yet executed"
   },
   "trust_score": {
-    "sessions_completed": 10,
+    "sessions_completed": 12,
     "mistakes_recorded": 12,
     "mistakes_repeated": 3,
     "rvl_pass": true,
-    "canon_full_pass": 2,
+    "canon_full_pass": 3,
     "ci_fixed": 2,
     "honest_gaps_declared": [
       "SLSA 0/36",

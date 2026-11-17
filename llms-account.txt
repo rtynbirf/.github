@@ -1,6 +1,6 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-17 19:50 UTC · источник: живой GitHub API (public:/users/rtynbirf/repos (public only)) · владелец rtynbirf
+> Автоген 2026-11-17 20:28 UTC · источник: живой GitHub API (public:/users/rtynbirf/repos (public only)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
 ## Репозитории публичные (73)
@@ -65,7 +65,7 @@
 - [ruvson](https://github.com/rtynbirf/ruvson) — КНИГА RUVSON
 - [ruvson-lyrics](https://github.com/rtynbirf/ruvson-lyrics) — RUVSON — тексты 65 треков: черновики, пайплайн, финальный ZIP
 - [ruvson-rse2](https://github.com/rtynbirf/ruvson-rse2) — RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.
-- [singulyar](https://github.com/rtynbirf/singulyar) — СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 64 песни · 197 языков (цель 200) · ОРКЕСТРАТОР ·15 · хаб + 52 двери · PWA (офлайн, без слежки)
+- [singulyar](https://github.com/rtynbirf/singulyar) — СИНГУЛЯР — офлайн-вселенная караоке RUVSON: 68 песен · 197 языков (цель 200) · ОРКЕСТРАТОР ·15 · хаб + 52 двери · PWA (офлайн, без слежки)
 - [singulyar-a0-audit](https://github.com/rtynbirf/singulyar-a0-audit) — SINGULYAR × A0 — independent audit (PACKAGE VALID + BRIDGE VALID) and R4 port design
 - [singulyar-llm](https://github.com/rtynbirf/singulyar-llm) — Локальная модель СИНГУЛЯРА: Qwen2.5-0.5B-Instruct GGUF частями + инструкционный слой (ОБУЧЕНИЕ). Веса Apache-2.0, генерация — в браузере человека.
 - [task-graph-propagator](https://github.com/rtynbirf/task-graph-propagator) — Task Graph Engine: один пропагатор — все функции структуры графа задач (полукольца, Кана, критпуть, резервы, надёжность, крэшинг)

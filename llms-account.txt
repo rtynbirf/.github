@@ -1,9 +1,9 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-17 20:28 UTC · источник: живой GitHub API (public:/users/rtynbirf/repos (public only)) · владелец rtynbirf
+> Автоген 2026-11-18 15:47 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (73)
+## Репозитории публичные (74)
 - [.github](https://github.com/rtynbirf/.github) — .github — дефолтные community health files
 - [agryp](https://github.com/rtynbirf/agryp) — agryp — неспящий супервизор агентов уровня PID 1
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
@@ -36,6 +36,7 @@
 - [language-through-the-ages](https://github.com/rtynbirf/language-through-the-ages) — Язык сквозь эпохи — автономная HTML-экспозиция: семь способов мыслить язык (7 эпох × 7 гарнитур, эпистемические комментарии)
 - [lean-canon](https://github.com/rtynbirf/lean-canon) — КНИГА LEAN-КАНОНА
 - [lex-naturae](https://github.com/rtynbirf/lex-naturae) — Lex Naturae — claim/evidence ledger. Separates observations from hypotheses, philosophical principles and institutional rules. Machine-verifiable: CSV cell extraction, excerpt verification, SHA-256 artifact integrity, unit ranges, graph conflict detection. v0.7 — audited by Z.ai, 70/70 tests, BOM-tolerant.
+- [lfs-core](https://github.com/rtynbirf/lfs-core) — Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются. Канон v0.7 (main) + летопись v0.3→v0.7 (теги).
 - [linguistic-code](https://github.com/rtynbirf/linguistic-code) — Самодостаточный философский артефакт о языке, теле и опыте. δ requires body.
 - [markitdown](https://github.com/rtynbirf/markitdown) — MarkItDown
 - [neutral-browser](https://github.com/rtynbirf/neutral-browser) — Neutral Browser — НЕЙТРАЛЬНЫЙ БРАУЗЕР ПОЛЬЗОВАТЕЛЯ
@@ -83,6 +84,6 @@
 <!-- токена не было: приватный срез недоступен, счёт см. линт -->
 
 ## Счёт
-- public: 73
+- public: 74
 - private: 0
-- total: 73
+- total: 74

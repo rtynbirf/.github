@@ -1,0 +1,70 @@
+# Фасад по рождению (волна ×7, 2026-11-18) — принцип №3 канона 27:
+# рождение репо — событие, а не расписка крона. Новорождённый (или волна,
+# его родившая) шлёт repository_dispatch event_type=repo-born в .github —
+# фасад пересобирается и линтуется сразу. Недельный крон — страховка.
+# Замена выключенному вручную account-facade: всегда exit 0 — тревога живёт
+# в issue label alarm:facade (по «однажды»), CI не краснеет, шума ноль.
+name: фасад по рождению
+
+on:
+  repository_dispatch:
+    types: [repo-born]
+  workflow_dispatch:
+  schedule:
+    - cron: '37 3 * * 1' # страховка: еженедельно, как было у account-facade
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: facade
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    name: rebuild-and-lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout (пин по SHA — учитель OpenSSF Scorecard)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Пересборка фасада (строгий при ACCOUNT_TOKEN, public без него)
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCOUNT_TOKEN || '' }}
+        run: python3 tools/generate-account-llms-txt.py --out llms-account.txt
+
+      - name: Коммит при изменении
+        run: |
+          if ! git diff --quiet llms-account.txt; then
+            git config user.name "revo[bot]"
+            git config user.email "revo[bot]@users.noreply.github.com"
+            git add llms-account.txt
+            git commit -m "П36: фасад пересобран по событию repo-born (facade-birth)"
+            git push
+          else
+            echo "фасад свеж — коммита нет"
+          fi
+
+      - name: Линт — тревога однажды, CI не краснеет
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCOUNT_TOKEN || '' }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if python3 tools/lint-account-llms-txt.py --file llms-account.txt; then
+            echo "ФАСАД НЕ ВРЁТ"
+            gh issue list -R "$GITHUB_REPOSITORY" --state open --label "alarm:facade" --json number -q '.[].number' \
+              | while read n; do
+                  gh issue close "$n" -R "$GITHUB_REPOSITORY" \
+                    -c "фасад не врёт (такт ${{ github.run_id }}) — страж разряжен, тревога снята"
+                done
+          else
+            echo "ФАСАД ВРЁТ — тревога однажды (A-HUSH)"
+            N=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --label "alarm:facade" --json number -q 'length')
+            if [ "$N" = "0" ]; then
+              gh issue create -R "$GITHUB_REPOSITORY" --label "alarm:facade" \
+                -t "ALARM: фасад расходится с живым API" \
+                -b "run ${{ github.run_id }} — фасад-по-рождению поймал расхождение после 1 такта. Пока issue открыта — страж молчит (протокол A-HUSH)."
+            fi
+          fi

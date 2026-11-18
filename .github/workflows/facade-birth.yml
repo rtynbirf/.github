@@ -36,16 +36,33 @@ jobs:
           FACADE_PUBLIC: '1'
         run: python3 tools/generate-account-llms-txt.py --out llms-account.txt
 
-      - name: Коммит при изменении
+      - name: Коммит при изменении (храповик 3×20с против гонки с волнами)
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          if ! git diff --quiet llms-account.txt; then
-            git config user.name "revo[bot]"
-            git config user.email "revo[bot]@users.noreply.github.com"
-            git add llms-account.txt
-            git commit -m "П36: фасад пересобран по событию repo-born (facade-birth)"
-            git push
-          else
-            echo "фасад свеж — коммита нет"
+          if git diff --quiet llms-account.txt; then
+            echo "фасад свеж — коммита нет"; exit 0
+          fi
+          git config user.name "revo[bot]"
+          git config user.email "revo[bot]@users.noreply.github.com"
+          git add llms-account.txt
+          git commit -m "П36: фасад пересобран по событию repo-born (facade-birth)"
+          OK=0
+          for i in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin main; then
+              echo "фасад закоммичен (попытка $i)"; OK=1; break
+            fi
+            echo "гонка с волной (попытка $i/3) — перепроверка через 20 с"
+            git rebase --abort 2>/dev/null || true
+            sleep 20
+          done
+          if [ "$OK" = "0" ]; then
+            echo "фасад не закоммичен за 3 попытки — честный ALARM, CI не краснеет"
+            N=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --label "alarm:facade" --json number -q 'length')
+            [ "$N" = "0" ] && gh issue create -R "$GITHUB_REPOSITORY" --label "alarm:facade" \
+              -t "ALARM: фасад расходится с живым API" \
+              -b "run ${{ github.run_id }} — коммит фасада не встал за 3 перепроверки (гонка с волнами). Пока issue открыта — страж молчит (A-HUSH)." || true
           fi
 
       - name: Линт — тревога однажды, CI не краснеет

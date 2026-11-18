@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-18T20:21:09.497171+00:00",
- "run_id": "44390069909",
- "run_url": "https://github.com/rtynbirf/.github/actions/runs/44390069909",
+ "generated": "2026-11-18T20:24:47.598120+00:00",
+ "run_id": "44390737450",
+ "run_url": "https://github.com/rtynbirf/.github/actions/runs/44390737450",
  "mode": "dispatch",
  "verdict": "🚨 ДИВЕРГЕНЦИЙ: 1",
  "alarms": [
-  "account-sentinel снимок устарел: 8.3 дн (порог 8)"
+  "account-sentinel снимок устарел: 8.4 дн (порог 8)"
  ],
  "seal": {
   "sealed": 30,
@@ -47,5 +47,5 @@
    "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6771112727"
   }
  },
- "fingerprint": "7ad5dee9407a419b"
+ "fingerprint": "501ef21d2869ca42"
 }

@@ -30,10 +30,10 @@ jobs:
       - name: Checkout (пин по SHA — учитель OpenSSF Scorecard)
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Пересборка фасада (строгий при ACCOUNT_TOKEN, authed-public без него)
+      - name: Пересборка фасада (authed-public; strict ждёт живой ACCOUNT_TOKEN)
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCOUNT_TOKEN || github.token }}
-          FACADE_PUBLIC: ${{ secrets.ACCOUNT_TOKEN == '' && '1' || '' }}
+          GITHUB_TOKEN: ${{ github.token }}
+          FACADE_PUBLIC: '1'
         run: python3 tools/generate-account-llms-txt.py --out llms-account.txt
 
       - name: Коммит при изменении
@@ -50,8 +50,8 @@ jobs:
 
       - name: Линт — тревога однажды, CI не краснеет
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCOUNT_TOKEN || github.token }}
-          FACADE_PUBLIC: ${{ secrets.ACCOUNT_TOKEN == '' && '1' || '' }}
+          GITHUB_TOKEN: ${{ github.token }}
+          FACADE_PUBLIC: '1'
           GH_TOKEN: ${{ github.token }}
         run: |
           if python3 tools/lint-account-llms-txt.py --file llms-account.txt; then

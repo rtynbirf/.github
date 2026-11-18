@@ -147,13 +147,8 @@ def main() -> int:
         if len(facade["prv_names"]) != len(prv_live):
             errs.append(f"счёт private: фасад {len(facade['prv_names'])} != API {len(prv_live)}")
     else:
-        if token:
-            print("ПРИМЕЧАНИЕ: authed-public — приватный срез не запрашивался "
-                  "(FACADE_PUBLIC=1); проверены публичные имена и счёт public; "
-                  "strict ждёт secret ACCOUNT_TOKEN")
-        else:
-            print("ПРИМЕЧАНИЕ: токена нет — приватный срез недоступен анонимно; "
-                  "проверены публичные имена и счёт public; strict ждёт secret ACCOUNT_TOKEN")
+        print("ПРИМЕЧАНИЕ: приватный срез не проверялся (public-режим фасада); "
+              "strict ждёт secret ACCOUNT_TOKEN")
 
     if errs:
         print("ФАСАД ВРЁТ:")

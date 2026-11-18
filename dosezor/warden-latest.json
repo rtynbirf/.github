@@ -1,18 +1,20 @@
 {
- "generated": "2026-11-18T20:05:24.530672+00:00",
- "run_id": "local",
- "run_url": "https://github.com/rtynbirf/.github/actions/runs/",
- "mode": "schedule",
- "verdict": "🚨 ДИВЕРГЕНЦИЙ: 2",
+ "generated": "2026-11-18T20:19:13.876684+00:00",
+ "run_id": "44389735497",
+ "run_url": "https://github.com/rtynbirf/.github/actions/runs/44389735497",
+ "mode": "dispatch",
+ "verdict": "🚨 ДИВЕРГЕНЦИЙ: 1",
  "alarms": [
-  "живой орган .github/dosezor-warden.yml в состоянии `ОТСУТСТВУЕТ`",
   "account-sentinel снимок устарел: 8.3 дн (порог 8)"
  ],
  "seal": {
   "sealed": 30,
   "live": 44,
-  "note": "baseline создан впервые (без аларма)",
-  "diff": {}
+  "note": "сверено с baseline от 2026-11-18",
+  "diff": {
+   "unsealed": [],
+   "newly_sealed": []
+  }
  },
  "canon_workflows": {
   "account-sentinel.yml": "active",
@@ -23,12 +25,12 @@
   "scorecard-analysis.yml": "active",
   "zizmor.yml": "active",
   "ci.yml": "active",
-  "dosezor-warden.yml": "ОТСУТСТВУЕТ"
+  "dosezor-warden.yml": "active"
  },
  "snapshots": {
   "account-sentinel-latest.json": {
    "generated": "2026-11-10T11:59:16.866482+00:00",
-   "age_days": 8.34
+   "age_days": 8.35
   }
  },
  "registry10_footprints": {
@@ -45,5 +47,5 @@
    "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6771112727"
   }
  },
- "fingerprint": "9e19da23d64433f1"
+ "fingerprint": "7ad5dee9407a419b"
 }

@@ -7,7 +7,7 @@ on:
   schedule:
     - cron: "30 5 * * 1"
   push:
-    branches: ["**"]
+    branches: ["main"]
   workflow_dispatch:
 concurrency:
   group: revo-obhod
@@ -43,7 +43,7 @@ jobs:
               break
             fi
             git commit -q -m "автопилот РЕВО: паспорт страницы перекован по контенту — REVE=РЕВО"
-            if git push --quiet; then
+            if git push origin HEAD:main --quiet; then
               echo "запись легла с попытки $attempt"
               pushed=1
               break
@@ -69,7 +69,7 @@ jobs:
           if [ "$open" -eq 0 ]; then
             gh issue create -R "$GITHUB_REPOSITORY" \
               -t "ALARM: РЕВО не смог записаться" \
-              -b "run ${{ github.run_id }} — 3 попытки fetch+rebase+push исчерпаны; проверить конфликты на main. Пока issue открыта — страж молчит (протокол A-HUSH)." \
+              -b "run ${{ github.run_id }} — 5 попыток fetch+regen+push исчерпаны; проверить конфликты на main. Пока issue открыта — страж молчит (протокол A-HUSH)." \
               -l "alarm:revo"
           else
             echo "тревога уже открыта ($open) — молчим"

@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="banner.png" alt=".github — Community health аккаунта: issue-формы и рамка" width="100%">
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/banner.png" alt=".github — Community health аккаунта: issue-формы и рамка" width="100%">
 </div>
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
-  <img src="repo-muse.svg" width="100%" alt="Муза .github: мастерская МОРИСС · РАППОРТ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/repo-muse.svg" width="100%" alt="Муза .github: мастерская МОРИСС · РАППОРТ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
   <br/>
-  <img src="forge-divider.svg" width="62%" alt="делитель мастерской МОРИСС · РАППОРТ" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/forge-divider.svg" width="62%" alt="делитель мастерской МОРИСС · РАППОРТ" />
 </div>
 <!--ФОРЖ:МУЗА:КОНЕЦ-->
 
@@ -22,7 +22,7 @@
 
 <!--ФОРЖ:АККАУНТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-account.svg" width="100%" alt="РЕВО-паспорт аккаунта: мастераские, живые/архив, автопилот на каждой странице" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/revo-account.svg" width="100%" alt="РЕВО-паспорт аккаунта: мастераские, живые/архив, автопилот на каждой странице" />
 </div>
 
 | РЕПО | ЖИВЫХ | МАСТЕРСКИХ | ОБНОВЛЕНО |
@@ -34,7 +34,7 @@
 
 # .github — дефолтные community health files
 
-<p align="center"><img src=".github/social-preview.png" alt=".github" width="100%"></p>
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/.github/social-preview.png" alt=".github" width="100%"></p>
 
 
 Публичный репозиторий-носитель дефолтных файлов сообщества аккаунта `rtynbirf`.

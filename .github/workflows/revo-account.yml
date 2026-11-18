@@ -32,7 +32,7 @@ jobs:
               break
             fi
             git commit -q -m "автопилот РЕВО: паспорт аккаунта перекован — REVE=РЕВО"
-            if git push --quiet; then
+            if git push origin HEAD:main --quiet; then
               echo "запись легла с попытки $attempt"
               pushed=1
               break

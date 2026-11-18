@@ -1,0 +1,83 @@
+name: "Доктор полотен — гейт личности полотна (T26)"
+
+# КЛАСС КОСЯКА T26 (текст-вместо-байтов, вскрыт байтами 2026-11-18 на 42 полотнах):
+# живописец-агент кладёт в contents API строку base64 вместо байтов полотна —
+# raw отдаёт text/plain + nosniff, браузер не рисует; при живых ссылках и ЗЕЛЁНЫХ
+# гейтах (дежурный обход мерил размер, а не личность полотна).
+# КАНОН: MITRE D3-FMBV (личность файла = магия байтов) · СТАНДАРТ-ДОКТОРА-ПОЛОТЕН.md ·
+# СВОД ОФОРМЛЕНИЯ п.6 (AGENTS.md) · У-2/П3 · П-36.
+# ОДНА МАШИНА — ДВЕ ДВЕРИ (канон СТАНДАРТ-ДОКТОРА-ДВЕ-ДВЕРИ):
+#   дверь СОБЫТИЕ — push: гейт --check; красный → самозалечка cwd коммитом (3 попытки,
+#                  зуб A-HUSH против гонки за main); не спасло — честный красный;
+#   дверь ДОЗОР   — schedule: самолекарь флота --heal через API (SENTEL_TOKEN канона дозора),
+#                  архив и отказы — честный пропуск; тишина I0: issue не открываются.
+# Доктор доктора запрещён: этот воркфлоу не смотрится доктором гейтов и сам ничего не реранит.
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "44 6 * * 5"   # пятница, один час до еженедельного обхода
+  workflow_dispatch:
+concurrency:
+  group: paint-doctor
+  cancel-in-progress: false
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    name: гейт личности полотен (--check, честный красный)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: полотно = байты, не размер (MITRE D3-FMBV)
+        run: python3 tools/paint_doctor.py --check
+
+  selfheal-local:
+    name: самозалечка тела (дверь СОБЫТИЕ, если гейт красный)
+    runs-on: ubuntu-latest
+    needs: [gate]
+    if: failure() && github.event_name == 'push'
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: декод больных полотен cwd в настоящие байты
+        run: python3 tools/paint_doctor.py --local-heal
+      - name: коммит залечки (3 попытки — гонка за main, зуб A-HUSH)
+        run: |
+          git config user.name "paint-doctor[bot]"
+          git config user.email "paint-doctor[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "лечить нечего — красный гейта был от сети/лимита, честно выходим"
+            exit 1
+          fi
+          git commit -q -m "доктор полотен: base64-текст → настоящие байты (T26)"
+          pushed=0
+          for attempt in 1 2 3; do
+            git fetch origin main --quiet || true
+            git rebase --autostash origin/main --quiet || git rebase --abort || true
+            if git push; then
+              echo "залечка вписана с попытки $attempt"
+              pushed=1
+              break
+            fi
+            echo "гонка за main: территория ушла во время записи — повтор (попытка $attempt)"
+            sleep 15
+          done
+          [ "$pushed" -eq 1 ] || { echo "пуш не прошёл за 3 попытки — честный красный"; exit 1; }
+
+  samolekar:
+    name: самолекарь флота (дверь ДОЗОР, все тела через API)
+    runs-on: ubuntu-latest
+    needs: [gate]
+    if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: обход флота и лечение полотен (токен дозора, архив — честный пропуск)
+        env:
+          SENTINEL_TOKEN: ${{ secrets.SENTINEL_TOKEN }}
+        run: python3 tools/paint_doctor.py --heal

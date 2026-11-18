@@ -23,6 +23,9 @@ def obhod():
     b = read("banner.png", binary=True)
     if not b or len(b) < 20000:
         drift.append("banner.png отсутствует или мельче 20 КБ (коллаж-штандарт)")
+    elif not b.startswith((b"\x89PNG", b"\xff\xd8\xff", b"GIF8")):
+        drift.append("banner.png — текст вместо байтов полотна (болезнь T26: base64-строка; "
+                     "лечит tools/paint_doctor.py, СТАНДАРТ-ДОКТОРА-ПОЛОТЕН)")
     m = read("repo-muse.svg")
     if not m or not m.lstrip().startswith("<svg"):
         drift.append("repo-muse.svg отсутствует или не SVG (полотно мастерской)")

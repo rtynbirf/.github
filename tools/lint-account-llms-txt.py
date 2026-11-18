@@ -75,12 +75,17 @@ def parse_facade(text: str) -> dict:
 
 def fetch_live() -> tuple[set, set, str]:
     token = os.environ.get("GITHUB_TOKEN", "").strip()
+    # FACADE_PUBLIC=1: публичное перечисление с авторизацией — минус unauth-
+    # стена 60/час на общих IP раннеров; проверки те же, что в public-режиме.
+    public_only = os.environ.get("FACADE_PUBLIC", "").strip() == "1"
     headers = {"User-Agent": "rtynbirf-facade-lint", "Accept": "application/vnd.github+json"}
-    if token:
+    if token and not public_only:
         headers["Authorization"] = f"Bearer {token}"
         base = f"{API}/user/repos?type=owner&per_page=100"
         mode = "strict"
     else:
+        headers["Authorization"] = (f"Bearer {token}") if token else ""
+        headers = {k: v for k, v in headers.items() if v}
         base = f"{API}/users/{OWNER}/repos?per_page=100"
         mode = "public"
     pub, prv, page = set(), set(), 1

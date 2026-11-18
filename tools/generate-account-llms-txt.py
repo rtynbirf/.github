@@ -25,11 +25,19 @@ API = "https://api.github.com"
 
 def fetch_repos() -> tuple[list[dict], str]:
     token = os.environ.get("GITHUB_TOKEN", "").strip()
+    # FACADE_PUBLIC=1: перечисление остаётся публичным (/users/... не отдаёт
+    # приватное), но вызов авторизован — устанавочный/клеточный токен
+    # минует unauth-стену 60/час на общих IP раннеров (факт 2026-11-18).
+    public_only = os.environ.get("FACADE_PUBLIC", "").strip() == "1"
     headers = {"User-Agent": "rtynbirf-facade-gen", "Accept": "application/vnd.github+json"}
-    if token:
+    if token and not public_only:
         headers["Authorization"] = f"Bearer {token}"
         url = f"{API}/user/repos?type=owner&per_page=100&sort=full_name"
         mode = "authed:/user/repos (public+private)"
+    elif token and public_only:
+        headers["Authorization"] = f"Bearer {token}"
+        url = f"{API}/users/{OWNER}/repos?per_page=100&sort=full_name"
+        mode = "authed-public:/users/rtynbirf/repos (public only, клеточный вызов)"
     else:
         url = f"{API}/users/{OWNER}/repos?per_page=100&sort=full_name"
         mode = "public:/users/rtynbirf/repos (public only)"
@@ -69,7 +77,13 @@ def render(repos: list[dict], mode: str) -> str:
         for r in prv:
             lines.append(f"- {r['name']} (private)")
     else:
-        lines.append("<!-- токена не было: приватный срез недоступен, счёт см. линт -->")
+        if "public+private" in mode:
+            note = "приватных репо нет (проверено строгим режимом /user/repos)"
+        elif "authed-public" in mode:
+            note = "public-режим (authed): приватный срез не запрашивался, счёт см. линт"
+        else:
+            note = "токена не было: приватный срез недоступен, счёт см. линт"
+        lines.append(f"<!-- {note} -->")
     lines += [
         "",
         "## Счёт",

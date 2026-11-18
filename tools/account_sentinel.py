@@ -167,7 +167,12 @@ def main():
     now = datetime.now(timezone.utc)
     st, repos = api("/user/repos?per_page=100&sort=full_name&affiliation=owner")
     if st != 200:
-        sys.exit(f"API {st}: флот не прочитан")
+        # ×25: мёртвый/отсутствующий токен (401) — не умирать молча. Флот на
+        # 2026-11-18 публичен целиком → осматриваем анонимно по публичному срезу.
+        globals()["TOKEN"] = os.environ.get("RUN_TOKEN", "").strip()
+        st, repos = api("/users/rtynbirf/repos?per_page=100&sort=full_name")
+        if st != 200:
+            sys.exit(f"API {st}: флот не прочитан (и в fallback-режиме)")
     pub, active, priv_billing, priv_prs, priv_holes = [], [], 0, 0, 0
     for r in repos:
         if r["archived"]:

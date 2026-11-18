@@ -34,6 +34,7 @@ jobs:
         continue-on-error: true
         env:
           SENTINEL_TOKEN: ${{ secrets.ACCOUNT_TOKEN || github.token }}
+          RUN_TOKEN: ${{ github.token }}   # ×25: живой fallback, когда ACCOUNT_TOKEN умер (401)
           GITHUB_RUN_ID: ${{ github.run_id }}
         run: python3 tools/account_sentinel.py
       - name: приёмка следа

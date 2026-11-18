@@ -178,6 +178,23 @@ def main():
                 iss = json.load(r)
             print('ISSUE:', iss['html_url'])
 
+    # ── приведено в соответствие: закрыть свои отработавшие ALARM-issue ──────
+    if not alarms and not post_full:
+        try:
+            issues = api(f'https://api.github.com/repos/{REPO}/issues?state=open&per_page=50')
+            for i in issues:
+                if 'WARDEN-FP:' in (i.get('body') or ''):
+                    req = urllib.request.Request(
+                        f"https://api.github.com/repos/{REPO}/issues/{i['number']}",
+                        data=json.dumps({'state': 'closed',
+                                         'state_reason': 'completed'}).encode(),
+                        headers={**H, 'Content-Type': 'application/json'}, method='PATCH')
+                    with urllib.request.urlopen(req, timeout=30) as r:
+                        r.read()
+                    print(f"ALARM #{i['number']} приведён в соответствие — закрыт дозором")
+        except Exception as e:
+            print('auto-close пропущен:', type(e).__name__)
+
     # ── коммит факта (через seal — отказ виден, [skip ci]) ───────────────────
     if gh.get('GITHUB_RUN_ID'):  # в Actions
         import subprocess

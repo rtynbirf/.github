@@ -1,9 +1,9 @@
 # rtynbirf — машинный фасад аккаунта (account llms.txt)
 
-> Автоген 2026-11-18 15:47 UTC · источник: живой GitHub API (authed:/user/repos (public+private)) · владелец rtynbirf
+> Автоген 2026-11-18 17:04 UTC · источник: живой GitHub API (authed-public:/users/rtynbirf/repos (public only, клеточный вызов)) · владелец rtynbirf
 > Правило П36: фасад не врёт. Еженедельный линт сверяет с API; расхождение = красный.
 
-## Репозитории публичные (74)
+## Репозитории публичные (75)
 - [.github](https://github.com/rtynbirf/.github) — .github — дефолтные community health files
 - [agryp](https://github.com/rtynbirf/agryp) — agryp — неспящий супервизор агентов уровня PID 1
 - [cell-rs](https://github.com/rtynbirf/cell-rs) — Первая Rust-клетка роя: ядро контура сверки — Tolerance/reconcile/Phase, sha256, байт-цепь. Кровь одна во всех телах.
@@ -58,6 +58,7 @@
 - [release-vault](https://github.com/rtynbirf/release-vault) — release-vault — Шифрованное хранилище релизных ассетов
 - [rent-mechanism-q43](https://github.com/rtynbirf/rent-mechanism-q43) — Рентный механизм: ядро Q43 v2, шесть законов L1-L6, инвариант I_K. Машинная программа R11-R49 (наблюдение -> атака -> патч).
 - [repo-doctrine](https://github.com/rtynbirf/repo-doctrine) — Доктрина настройки GitHub-репозиториев: человеком для человека. Чек-листы флагов, защита веток, токены, конвенции агентов, аварийные процедуры, карта аккаунта.
+- [repo-seed](https://github.com/rtynbirf/repo-seed) — Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27). Use this template → оснащённый орган.
 - [revo](https://github.com/rtynbirf/revo) — REVO — автономный прототип метода Reve: layout → render
 - [rtynbirf](https://github.com/rtynbirf/rtynbirf) — ЧЕЛОВЕК=АККАУНТ=PID1 · ПОЛИМАТ=МУЛЬТИАГЕНТ · живая кузня: рой агентов, офлайн-вселенная, ни одного стороннего виджета
 - [rtynbirf.github.io](https://github.com/rtynbirf/rtynbirf.github.io) — ЛАКОРНИЯ · MEGA-PLAYER SINGULYAR
@@ -81,9 +82,9 @@
 
 ## Репозитории приватные (0)
 
-<!-- токена не было: приватный срез недоступен, счёт см. линт -->
+<!-- public-режим (authed): приватный срез не запрашивался, счёт см. линт -->
 
 ## Счёт
-- public: 74
+- public: 75
 - private: 0
-- total: 74
+- total: 75

@@ -179,7 +179,7 @@ def main():
             print('ISSUE:', iss['html_url'])
 
     # ── приведено в соответствие: закрыть свои отработавшие ALARM-issue ──────
-    if not alarms and not post_full:
+    if not alarms and gh.get('POST_FULL', '').strip().lower() not in ('1', 'true'):
         try:
             issues = api(f'https://api.github.com/repos/{REPO}/issues?state=open&per_page=50')
             for i in issues:

@@ -9,8 +9,8 @@ name: account-sentinel
 # осматривается публичный срез анонимно.
 
 permissions:
-  contents: read
-  issues: write
+  contents: write   # ×25: было read — commit_file внутри account_sentinel.py
+  issues: write     #       молча падал (403), «зелёный» прогон не оставлял следа
 
 concurrency:
   group: account-sentinel
@@ -40,3 +40,7 @@ jobs:
         run: |
           test -f dosezor/heartbeat.json && echo "пульс записан: $(cat dosezor/heartbeat.json)"
           test -f dosezor/account-sentinel-latest.json && echo "след записан: $(wc -c < dosezor/account-sentinel-latest.json) байт"
+      - name: запечатать след в репо (×25: отказ теперь виден, не молчалив)
+        env:
+          GH_TOKEN: ${{ github.token }}   # запись в свой репо — встроенного токена достаточно и он живёт ровно на прогон
+        run: python3 tools/seal_dosezor_trace.py dosezor/account-sentinel-latest.json dosezor/heartbeat.json dosezor/live-heartbeat.json dosezor/live-ledger.jsonl

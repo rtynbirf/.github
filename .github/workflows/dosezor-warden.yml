@@ -1,0 +1,52 @@
+name: "🛡 dosezor-warden · дозор дозора"
+
+# Волна ×25: у дозоров появился собственный дозор. Родился из факта:
+# 2026-11-10 хаб дозоров (github-runbook, 22 workflow) замолчал, и 8 дней
+# НИКТО не заметил; 2026-11-18 дом запечатан (30 репо archived, реестр #10
+# read-only). Дозор живёт в публичном .github — работает даже при исчерпанных
+# минутах (канон account-sentinel) и не зависит от архивации других репо.
+# Проверяет (только репорт, лечение не выполняет — закон ревизора):
+#   1) ПЕЧАТЬ дома: набор archived-репо против warden-seal-baseline.json
+#      (вскрытие/новая печать = ALARM, GitOps-реконсиляция);
+#   2) живые органы .github: канон workflow state=active;
+#   3) свежесть снимка account-sentinel;
+#   4) исторические следы реестра #10 (факт, не аларм).
+# Зелёный по расписанию молчит; факт = dosezor/warden-latest.json (+baseline)
+# коммитится с [skip ci]; ALARM-issue с дедупом по WARDEN-FP.
+
+on:
+  schedule:
+    - cron: "17 7 * * *"   # ежедневно 07:17 UTC — после утреннего такта органов
+  workflow_dispatch:
+    inputs:
+      post_full:
+        description: "Открыть статус-issue даже при зелёном"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  actions: read
+
+concurrency:
+  group: dosezor-warden
+  cancel-in-progress: false
+
+jobs:
+  warden:
+    name: дозор дозоров
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      POST_FULL: ${{ github.event.inputs.post_full == 'true' }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Забрать штаб
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1 — домашний канон SHA-пин
+        with:
+          persist-credentials: false  # коммит факта идёт через API (seal), git-креды не нужны
+      - name: Дозор
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/warden_dosezor.py

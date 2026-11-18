@@ -1,0 +1,49 @@
+{
+ "generated": "2026-11-18T20:05:24.530672+00:00",
+ "run_id": "local",
+ "run_url": "https://github.com/rtynbirf/.github/actions/runs/",
+ "mode": "schedule",
+ "verdict": "🚨 ДИВЕРГЕНЦИЙ: 2",
+ "alarms": [
+  "живой орган .github/dosezor-warden.yml в состоянии `ОТСУТСТВУЕТ`",
+  "account-sentinel снимок устарел: 8.3 дн (порог 8)"
+ ],
+ "seal": {
+  "sealed": 30,
+  "live": 44,
+  "note": "baseline создан впервые (без аларма)",
+  "diff": {}
+ },
+ "canon_workflows": {
+  "account-sentinel.yml": "active",
+  "house-live.yml": "active",
+  "house-sweep.yml": "active",
+  "revo-account.yml": "active",
+  "revo-obhod.yml": "active",
+  "scorecard-analysis.yml": "active",
+  "zizmor.yml": "active",
+  "ci.yml": "active",
+  "dosezor-warden.yml": "ОТСУТСТВУЕТ"
+ },
+ "snapshots": {
+  "account-sentinel-latest.json": {
+   "generated": "2026-11-10T11:59:16.866482+00:00",
+   "age_days": 8.34
+  }
+ },
+ "registry10_footprints": {
+  "СЧЁТЧИК": {
+   "last": "2026-11-10T17:58:18+00:00",
+   "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6775029546"
+  },
+  "РЕВИЗОР": {
+   "last": "2026-11-10T14:30:28+00:00",
+   "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6769991722"
+  },
+  "OSPS": {
+   "last": "2026-11-10T15:15:21+00:00",
+   "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6771112727"
+  }
+ },
+ "fingerprint": "9e19da23d64433f1"
+}

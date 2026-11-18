@@ -1,0 +1,271 @@
+{
+ "generated": "2026-11-18T20:07:03.092525+00:00",
+ "days": 30,
+ "total_minutes_linux_x1": 246951,
+ "repos": [
+  {
+   "repo": "ruvson-lyrics",
+   "minutes_linux_x1": 28017,
+   "runs": 480,
+   "page_errors": 0
+  },
+  {
+   "repo": "domovoy-tweaker",
+   "minutes_linux_x1": 26955,
+   "runs": 164,
+   "page_errors": 0
+  },
+  {
+   "repo": "cell65-host",
+   "minutes_linux_x1": 26596,
+   "runs": 403,
+   "page_errors": 0
+  },
+  {
+   "repo": "H-PE11-PHOENIX",
+   "minutes_linux_x1": 26519,
+   "runs": 294,
+   "page_errors": 0
+  },
+  {
+   "repo": "repo-doctrine",
+   "minutes_linux_x1": 25340,
+   "runs": 583,
+   "page_errors": 0
+  },
+  {
+   "repo": "voice-atlas-llm",
+   "minutes_linux_x1": 23291,
+   "runs": 320,
+   "page_errors": 0
+  },
+  {
+   "repo": "rtynbirf.github.io",
+   "minutes_linux_x1": 16262,
+   "runs": 382,
+   "page_errors": 0
+  },
+  {
+   "repo": "polymath-os",
+   "minutes_linux_x1": 15816,
+   "runs": 793,
+   "page_errors": 0
+  },
+  {
+   "repo": "runtime-protocol",
+   "minutes_linux_x1": 10731,
+   "runs": 249,
+   "page_errors": 0
+  },
+  {
+   "repo": "karaoke-dream",
+   "minutes_linux_x1": 9464,
+   "runs": 407,
+   "page_errors": 0
+  },
+  {
+   "repo": "neutral-browser",
+   "minutes_linux_x1": 5757,
+   "runs": 349,
+   "page_errors": 0
+  },
+  {
+   "repo": "edinyy-svod",
+   "minutes_linux_x1": 4901,
+   "runs": 280,
+   "page_errors": 0
+  },
+  {
+   "repo": "agryp",
+   "minutes_linux_x1": 4105,
+   "runs": 533,
+   "page_errors": 0
+  },
+  {
+   "repo": "cell-rs",
+   "minutes_linux_x1": 3579,
+   "runs": 230,
+   "page_errors": 0
+  },
+  {
+   "repo": "release-vault",
+   "minutes_linux_x1": 2437,
+   "runs": 285,
+   "page_errors": 0
+  },
+  {
+   "repo": "singulyar",
+   "minutes_linux_x1": 2122,
+   "runs": 794,
+   "page_errors": 0
+  },
+  {
+   "repo": "combain-v2",
+   "minutes_linux_x1": 1668,
+   "runs": 792,
+   "page_errors": 0
+  },
+  {
+   "repo": "rtynbirf",
+   "minutes_linux_x1": 1459,
+   "runs": 785,
+   "page_errors": 0
+  },
+  {
+   "repo": ".github",
+   "minutes_linux_x1": 1349,
+   "runs": 790,
+   "page_errors": 0
+  },
+  {
+   "repo": "revo",
+   "minutes_linux_x1": 1273,
+   "runs": 346,
+   "page_errors": 0
+  },
+  {
+   "repo": "cell-swarm",
+   "minutes_linux_x1": 1232,
+   "runs": 785,
+   "page_errors": 0
+  },
+  {
+   "repo": "uace",
+   "minutes_linux_x1": 848,
+   "runs": 178,
+   "page_errors": 0
+  },
+  {
+   "repo": "ruvson",
+   "minutes_linux_x1": 819,
+   "runs": 179,
+   "page_errors": 0
+  },
+  {
+   "repo": "index",
+   "minutes_linux_x1": 801,
+   "runs": 407,
+   "page_errors": 0
+  },
+  {
+   "repo": "domovoy",
+   "minutes_linux_x1": 667,
+   "runs": 137,
+   "page_errors": 0
+  },
+  {
+   "repo": "ekonomika",
+   "minutes_linux_x1": 640,
+   "runs": 138,
+   "page_errors": 0
+  },
+  {
+   "repo": "lean-canon",
+   "minutes_linux_x1": 610,
+   "runs": 145,
+   "page_errors": 0
+  },
+  {
+   "repo": "ekspozicii",
+   "minutes_linux_x1": 603,
+   "runs": 149,
+   "page_errors": 0
+  },
+  {
+   "repo": "hologram",
+   "minutes_linux_x1": 589,
+   "runs": 153,
+   "page_errors": 0
+  },
+  {
+   "repo": "github-doctrine",
+   "minutes_linux_x1": 545,
+   "runs": 137,
+   "page_errors": 0
+  },
+  {
+   "repo": "polymat-hive",
+   "minutes_linux_x1": 538,
+   "runs": 201,
+   "page_errors": 0
+  },
+  {
+   "repo": "free-man",
+   "minutes_linux_x1": 472,
+   "runs": 110,
+   "page_errors": 0
+  },
+  {
+   "repo": "polymath-core",
+   "minutes_linux_x1": 372,
+   "runs": 105,
+   "page_errors": 0
+  },
+  {
+   "repo": "door-zero",
+   "minutes_linux_x1": 368,
+   "runs": 104,
+   "page_errors": 0
+  },
+  {
+   "repo": "invariant-manifest",
+   "minutes_linux_x1": 50,
+   "runs": 36,
+   "page_errors": 0
+  },
+  {
+   "repo": "singulyar-a0-audit",
+   "minutes_linux_x1": 49,
+   "runs": 33,
+   "page_errors": 0
+  },
+  {
+   "repo": "khozyain",
+   "minutes_linux_x1": 41,
+   "runs": 32,
+   "page_errors": 0
+  },
+  {
+   "repo": "lex-naturae",
+   "minutes_linux_x1": 21,
+   "runs": 15,
+   "page_errors": 0
+  },
+  {
+   "repo": "fond-host",
+   "minutes_linux_x1": 20,
+   "runs": 14,
+   "page_errors": 0
+  },
+  {
+   "repo": "kb",
+   "minutes_linux_x1": 13,
+   "runs": 7,
+   "page_errors": 0
+  },
+  {
+   "repo": "code",
+   "minutes_linux_x1": 7,
+   "runs": 7,
+   "page_errors": 0
+  },
+  {
+   "repo": "karta",
+   "minutes_linux_x1": 4,
+   "runs": 4,
+   "page_errors": 0
+  },
+  {
+   "repo": "lfs-core",
+   "minutes_linux_x1": 1,
+   "runs": 1,
+   "page_errors": 0
+  },
+  {
+   "repo": "repo-seed",
+   "minutes_linux_x1": 0,
+   "runs": 0,
+   "page_errors": 0
+  }
+ ]
+}

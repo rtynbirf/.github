@@ -140,6 +140,14 @@
    "result": "Dependabot alerts 46/46 живых (assembly-protocol включён обходом); архивы 422 §4; secret scanning REST 404; автофиксы — решение Хозяина; token_rotator.py dry-run пройден на живом ключе; канон 8 узлов 11/11 valid; f2d5735 три стража зелёные; Е32 пойман assert до пуша",
    "evidence_ref": "assembly-protocol f2d5735: self-test-audit/protocol-wave (evidence/security_sweep.{csv,json}, claims.json AP-SEC-001); scripts/token_rotator.py",
    "canon_pass": true
+  },
+  {
+   "id": "s21",
+   "date": "2026-11-20",
+   "mandate": "dogovor: TH-AP-06 — договор агента (правило = карточка 6 строк + автомат)",
+   "result": "rtynbirf/dogovor: FSM 16/16, 5 карточек ПИЛОТ до 2026-12-04, страж зелёный; канон SSOT 9 узлов 12/12; Е33 пойман своим вектором, Е34 пойман пасечником (печать pid1 доставлена, перезапуск зелёный)",
+   "evidence_ref": "dogovor 001fe73; assembly-protocol 0496fd9 (claim AP-DOGV-001, узел dogovor-contract)",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -322,6 +330,18 @@
    "class": "усечение raw-артефакта 'w'-режимом (writer-only вместо read→extend→write) — пойман своим assert до пуша, откат по git HEAD",
    "date": "2026-11-19",
    "session": "s20"
+  },
+  {
+   "id": "E33",
+   "class": "классификация причин по подстроке — корзины кривой формы и ложного статуса смешались; пойман собственным самотестом 15/16 до пуша",
+   "date": "2026-11-20",
+   "session": "s21"
+  },
+  {
+   "id": "E34",
+   "class": "новая клетка без печати pid1 — честный красный пасечника на первом пушe; КУЗНЯ, перезапуск зелёный",
+   "date": "2026-11-20",
+   "session": "s21"
   }
  ],
  "rvl_status": "PASS",
@@ -337,8 +357,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 17,
-  "mistakes_recorded": 30,
+  "sessions_completed": 18,
+  "mistakes_recorded": 32,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,
@@ -369,5 +389,5 @@
   "Lock self-attestation — external witness needed for full trust",
   "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
  ],
- "updated": "2026-11-19"
+ "updated": "2026-11-20"
 }

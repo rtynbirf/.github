@@ -148,6 +148,14 @@
    "result": "rtynbirf/dogovor: FSM 16/16, 5 карточек ПИЛОТ до 2026-12-04, страж зелёный; канон SSOT 9 узлов 12/12; Е33 пойман своим вектором, Е34 пойман пасечником (печать pid1 доставлена, перезапуск зелёный)",
    "evidence_ref": "dogovor 001fe73; assembly-protocol 0496fd9 (claim AP-DOGV-001, узел dogovor-contract)",
    "canon_pass": true
+  },
+  {
+   "id": "s22",
+   "date": "2026-11-20",
+   "mandate": "ДОМ-АВТОМАТ-ФЛОТ: TH-AP-07 — конституция во все репо, статусы вычисляются",
+   "result": "47 активных репо вкачаны (141 файл, 0 ошибок); witness 46/47 зелёных, 0 красных, markitdown = известные ворота 422; амнистия = исполняемая команда; самотест 11/11; Е35 пойман своим прогоном",
+   "evidence_ref": "repo-doctrine 26-ОТЧЁТ + 26-witness-CSV; scripts/dom_avtomat/fleet_witness_final.csv",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -342,6 +350,12 @@
    "class": "новая клетка без печати pid1 — честный красный пасечника на первом пушe; КУЗНЯ, перезапуск зелёный",
    "date": "2026-11-20",
    "session": "s21"
+  },
+  {
+   "id": "E35",
+   "class": "классификация добра/зла по префиксу строки — добрая весть границы попала в санкции; пойман своим --check до пуша; каналы bad/good раздельны",
+   "date": "2026-11-20",
+   "session": "s22"
   }
  ],
  "rvl_status": "PASS",
@@ -357,8 +371,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 18,
-  "mistakes_recorded": 32,
+  "sessions_completed": 19,
+  "mistakes_recorded": 33,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,

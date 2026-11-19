@@ -132,6 +132,14 @@
    "result": "11 проб машинно (dispatch 422×3 при enabled=true; enable 204/204; rerun 403; check-suites пусты); узел markitdown-gate + claim AP-GATE-001 в пакете; BUILD_GRAPH.lock.json в репо; канон 8 узлов, 10/10 valid=true; f004e21 — три стража зелёные; Е31 пойман lex-naturae",
    "evidence_ref": "assembly-protocol f004e21: self-test-audit/protocol-wave (evidence/markitdown_gate.{csv,json}, claims.json, BUILD_GRAPH.json+lock)",
    "canon_pass": true
+  },
+  {
+   "id": "s20",
+   "date": "2026-11-19",
+   "mandate": "assembly-protocol: TH-AP-05 — советы исполнением: безопасность флота + ротация ключа",
+   "result": "Dependabot alerts 46/46 живых (assembly-protocol включён обходом); архивы 422 §4; secret scanning REST 404; автофиксы — решение Хозяина; token_rotator.py dry-run пройден на живом ключе; канон 8 узлов 11/11 valid; f2d5735 три стража зелёные; Е32 пойман assert до пуша",
+   "evidence_ref": "assembly-protocol f2d5735: self-test-audit/protocol-wave (evidence/security_sweep.{csv,json}, claims.json AP-SEC-001); scripts/token_rotator.py",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -308,6 +316,12 @@
    "class": "append в raw-артефакт без перепломбировки зависимых claims — lex-naturae отказал пакету до пуша (6 claims INVALID)",
    "date": "2026-11-19",
    "session": "s19"
+  },
+  {
+   "id": "E32",
+   "class": "усечение raw-артефакта 'w'-режимом (writer-only вместо read→extend→write) — пойман своим assert до пуша, откат по git HEAD",
+   "date": "2026-11-19",
+   "session": "s20"
   }
  ],
  "rvl_status": "PASS",
@@ -323,8 +337,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 16,
-  "mistakes_recorded": 29,
+  "sessions_completed": 17,
+  "mistakes_recorded": 30,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,
@@ -337,7 +351,9 @@
    "7 rule violations in session s14 (Е15-Е21)",
    "invariant-manifest: ядро без witness-файла — вопрос канона СВИДЕТЕЛЯ",
    "RVL не перегонялся в s17/s18",
-   "markitdown: ворота зафиксированы как опровержимое состояние в каноне (узел markitdown-gate); REST исчерпан 11 пробами; UI-консент — опция Хозяина"
+   "markitdown: ворота зафиксированы как опровержимое состояние в каноне (узел markitdown-gate); REST исчерпан 11 пробами; UI-консент — опция Хозяина",
+   "Dependabot автофиксы (PR) не включены — PR-шум на чужих орбитах; решение за Хозяином (claim AP-SEC-001)",
+   "secret scanning через REST недоступен (404 ×5 доме-ядро) — настройка через UI"
   ]
  },
  "chain_of_attestations": {

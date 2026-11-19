@@ -318,3 +318,35 @@ non-fast-forward (гонка за main между ботами и заливка
   seed 7173/7174/7175) отменил неслепой приговор: 10 дефектных единиц,
   1 BREAK (C10-T2b). Вердикт — **CONDITIONAL PASS**, подпись внешнего судьи
   ждёт пакет `docs/JUDGE-PACK_v0.2.4.md`. Тезис №7: НАШИ = СВОИ + ЧУЖИЕ.
+
+
+---
+
+## Ф4 ПРОЦЕДура: filter-repo (история клининг)
+
+**При клининге ЖИР репо (>1MB):**
+
+1. `git clone --mirror` (полный бэкап)
+2. Disable rulesets: `PUT /repos/{owner}/{repo}/rulesets/{id} {"enforcement":"disabled"}`
+3. Delete branch protection: `DELETE /repos/{owner}/{repo}/branches/main/protection`
+4. `git filter-repo --invert-paths --path <мусор> --force`
+5. `git reflog expire --expire=now --all && git gc --prune=now --aggressive`
+6. `git push --force origin main`
+7. Restore branch protection + enable rulesets
+8. Ф5: замер после, таблица до/после
+
+**3 слоя защиты (branch + ruleset + ruleset) — все нужно снять и восстановить.**
+
+---
+
+## HOUSE-KEEPER — daily autопилот
+
+`scripts/house-keeper.py` + `.github/workflows/house-keeper.yml` — ежедневный аудит:
+- Step 0 gate (печатает последние 3 косяки)
+- I-3 Inbox-zero (auto-fix: mark-all-read)
+- I-2 Red CI (detect failures)
+- ЖИР repos (>1MB — alert)
+- Topics < 3 (alert)
+- No license (alert)
+
+**Ежедневно 04:17 UTC.** Агент не запускает — CI запускает. Храповик кусает без агента.

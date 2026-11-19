@@ -156,9 +156,23 @@ def main():
     # ── ALARM-issue (дедуп по WARDEN-FP среди OPEN) ──────────────────────────
     if alarms or gh.get('POST_FULL', '').strip().lower() in ('1', 'true'):
         issues = api(f'https://api.github.com/repos/{REPO}/issues?state=open&per_page=50')
-        dup = next((i for i in issues if f'WARDEN-FP:{fp}' in (i.get('body') or '')), None)
-        if dup:
+        # Зуб №7 (A-HUSH v2): дедуп по РОДСТВУ — все ALARM дозора живут в одной issue,
+        # смена состава алармов дописывается фактом-комментарием, а не плодит новую.
+        dup = next((i for i in issues
+                    if i.get('title', '').startswith('ALARM: дозор дозора')
+                    or 'WARDEN-FP:' in (i.get('body') or '')), None)
+        if dup and f'WARDEN-FP:{fp}' in (dup.get('body') or ''):
             print('АЛАРМ УЖЕ ОТКРЫТ (дедуп):', dup['html_url'])
+        elif dup:
+            cmt = urllib.request.Request(
+                f"https://api.github.com/repos/{REPO}/issues/{dup['number']}/comments",
+                data=json.dumps({'body': f"🛡 состав алармов изменился · {now.strftime('%Y-%m-%d %H:%M UTC')} · {verdict}\n\n"
+                                         + ('- 🚨 ' + '\n- 🚨 '.join(alarms) + '\n\n' if alarms else '')
+                                         + f"<!-- WARDEN-FP:{fp} -->"}).encode(),
+                headers={**H, 'Content-Type': 'application/json'}, method='POST')
+            with urllib.request.urlopen(cmt, timeout=30) as r:
+                json.load(r)
+            print('ДОПИСАНО В ОТКРЫТУЮ ТРЕВОГУ:', dup['html_url'])
         else:
             body = (
                 f"🛡 **ДОЗОР ДОЗОРА** · {now.strftime('%Y-%m-%d %H:%M UTC')} · {verdict}\n\n"
@@ -170,7 +184,8 @@ def main():
                   f"<!-- WARDEN-FP:{fp} -->")
             req = urllib.request.Request(
                 f'https://api.github.com/repos/{REPO}/issues',
-                data=json.dumps({'title': f"ALARM: дозор дозора — {verdict}" if alarms
+                data=json.dumps({'labels': ['alarm:dosezor'],
+                                 'title': f"ALARM: дозор дозора — {verdict}" if alarms
                                  else "🛡 ДОЗОР ДОЗОРА · полный статус (dispatch)",
                                  'body': body}).encode(),
                 headers={**H, 'Content-Type': 'application/json'}, method='POST')

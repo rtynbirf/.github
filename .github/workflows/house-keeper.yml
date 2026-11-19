@@ -1,0 +1,28 @@
+name: HOUSE-KEEPER · daily audit
+
+on:
+  schedule:
+    - cron: "17 4 * * *"  # ежедневно 04:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  notifications: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.12"
+      - name: Step 0 gate
+        run: python3 scripts/house-keeper.py --step0
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: House audit
+        run: python3 scripts/house-keeper.py --check --fix
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

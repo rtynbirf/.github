@@ -156,6 +156,14 @@
    "result": "47 активных репо вкачаны (141 файл, 0 ошибок); witness 46/47 зелёных, 0 красных, markitdown = известные ворота 422; амнистия = исполняемая команда; самотест 11/11; Е35 пойман своим прогоном",
    "evidence_ref": "repo-doctrine 26-ОТЧЁТ + 26-witness-CSV; scripts/dom_avtomat/fleet_witness_final.csv",
    "canon_pass": true
+  },
+  {
+   "id": "s23",
+   "date": "2026-11-20",
+   "mandate": "АУДИТ-КВ-ФСМ: TH-AP-08 — «где у него косяки?» перебором, v2 вкачана в дом",
+   "result": "перебор 128 входов поймал лазейку переметки (Е36, повтор класса Е29/Е33/Е35); v2: гейты по свойствам, remedy-функция, revise-петля, хэш-цепь трассы; selftest 17/17, атаки 11/11; вкачано в repo-doctrine (Е36+27-код+27-отчёт) и dogovor ДОМ/",
+   "evidence_ref": "repo-doctrine 27-ОТЧЁТ-АУДИТ-КВ-ФСМ-2026-11-20.md; scripts/audit_claim_fsm/{audit_v1,audit_v2_attacks}.py",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -356,6 +364,12 @@
    "class": "классификация добра/зла по префиксу строки — добрая весть границы попала в санкции; пойман своим --check до пуша; каналы bad/good раздельны",
    "date": "2026-11-20",
    "session": "s22"
+  },
+  {
+   "id": "E36",
+   "class": "гейты привязаны к метке типа вместо свойств утверждения: переметка report/instruction обходила контрпример-гейт; пойман перебором всех 128 входов; правило: гейт = свойство, метка = только маршрут пруфа",
+   "date": "2026-11-20",
+   "session": "s23"
   }
  ],
  "rvl_status": "PASS",
@@ -371,8 +385,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 19,
-  "mistakes_recorded": 33,
+  "sessions_completed": 20,
+  "mistakes_recorded": 34,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,

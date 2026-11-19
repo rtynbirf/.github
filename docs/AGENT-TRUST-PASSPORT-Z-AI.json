@@ -124,6 +124,14 @@
    "result": "fleet-sweep: 46 тел, PASS 45 + GATED-LEGAL 1, FAIL 0; CI стража success; канон 7 узлов, 9 claims valid=true; Е29-Е30 пойманы самим до окраски",
    "evidence_ref": "assembly-protocol fleet/FLEET_VERDICT.csv + self-test-audit/protocol-wave (e4563e9→7af2b81→c6ac992)",
    "canon_pass": true
+  },
+  {
+   "id": "s19",
+   "date": "2026-11-19",
+   "mandate": "assembly-protocol: TH-AP-04 — ворота markitdown в каноне SSOT (протокол 11 проб, узел, claim, lock)",
+   "result": "11 проб машинно (dispatch 422×3 при enabled=true; enable 204/204; rerun 403; check-suites пусты); узел markitdown-gate + claim AP-GATE-001 в пакете; BUILD_GRAPH.lock.json в репо; канон 8 узлов, 10/10 valid=true; f004e21 — три стража зелёные; Е31 пойман lex-naturae",
+   "evidence_ref": "assembly-protocol f004e21: self-test-audit/protocol-wave (evidence/markitdown_gate.{csv,json}, claims.json, BUILD_GRAPH.json+lock)",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -294,6 +302,12 @@
    "class": "контракт окружения: имя env-переменной раннера разошлось с вызывающим (401, пойман пробой)",
    "date": "2026-11-19",
    "session": "s18"
+  },
+  {
+   "id": "E31",
+   "class": "append в raw-артефакт без перепломбировки зависимых claims — lex-naturae отказал пакету до пуша (6 claims INVALID)",
+   "date": "2026-11-19",
+   "session": "s19"
   }
  ],
  "rvl_status": "PASS",
@@ -309,8 +323,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 15,
-  "mistakes_recorded": 28,
+  "sessions_completed": 16,
+  "mistakes_recorded": 29,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,
@@ -321,11 +335,9 @@
    "Step 0 not CI-integrated",
    "meta-audit not executed",
    "7 rule violations in session s14 (Е15-Е21)",
-   "markitdown: CI форка не исполняет protocol-verify — законное состояние (s16)",
-   "markitdown: ворота консента форка (422 при enabled=true) — прогон ждёт UI-решения Хозяина",
    "invariant-manifest: ядро без witness-файла — вопрос канона СВИДЕТЕЛЯ",
-   "markitdown: GATED-LEGAL — вердикт стражем со стороны SSOT; UI-консент — опция Хозяина, не блокер",
-   "RVL не перегонялся в s17/s18"
+   "RVL не перегонялся в s17/s18",
+   "markitdown: ворота зафиксированы как опровержимое состояние в каноне (узел markitdown-gate); REST исчерпан 11 пробами; UI-консент — опция Хозяина"
   ]
  },
  "chain_of_attestations": {

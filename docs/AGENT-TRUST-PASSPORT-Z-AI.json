@@ -108,6 +108,14 @@
    "result": "45/46 зелёных хвостов (1 законное состояние markitdown); автомат 15/15 векторов, 6/6 незаконных пойманы; HUMAN-LFS STRUCTURE PASS + lex-naturae valid=true 7/7; косяки Е11/Е14 [ПОВТОР], Е22-Е25 записаны тем же тактом",
    "evidence_ref": "assembly-protocol/self-test-audit/protocol-wave/ (CSV + логи + claims + валидаторы)",
    "canon_pass": true
+  },
+  {
+   "id": "s17",
+   "date": "2026-11-19",
+   "mandate": "assembly-protocol: продолжение — поллинг роя, волна СВИДЕТЕЛЯ, лечение обвязки, ритуал дома",
+   "result": "protocol 45/46 зелёных + 1 законное состояние; witness 44/45; канон STRUCTURE PASS 6 узлов + lex-naturae valid=true 8/8; шов сессии 25 закрыт (Е22-Е25 бэкфилл); Е26-Е28 записаны",
+   "evidence_ref": "assembly-protocol/self-test-audit/protocol-wave/ (commits 9724104, 14edcac)",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -224,6 +232,48 @@
    "class": "GITHUB_TOKEN-пуш не триггерит workflow — переподжиг только PAT-пушем",
    "date": "2026-11-19",
    "session": "s16"
+  },
+  {
+   "id": "E22",
+   "class": "массовая механика без представителя (бэкфилл)",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E23",
+   "class": "полномочия выводились из себя, не из устава (бэкфилл)",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E24",
+   "class": "ghost-нуль: двоеточие в name без кавычек (бэкфилл)",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E25",
+   "class": "GITHUB_TOKEN-пуш не триггерит workflow (бэкфилл)",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E26",
+   "class": "фантом-канал: транспорт съел [m на здоровом файле; фикс prevented гекс-верификацией",
+   "date": "2026-11-19",
+   "session": "s17"
+  },
+  {
+   "id": "E27",
+   "class": "обвязка игнорирует контракт кодов выхода инструмента (exit 1 = valid+warnings)",
+   "date": "2026-11-19",
+   "session": "s17"
+  },
+  {
+   "id": "E28",
+   "class": "[ПОВТОР] Е21 — УРОКи объявлены в ворклоге без байтов в реестре; закрыто бэкфиллом",
+   "date": "2026-11-19",
+   "session": "s17"
   }
  ],
  "rvl_status": "PASS",
@@ -239,9 +289,9 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 13,
-  "mistakes_recorded": 19,
-  "mistakes_repeated": 5,
+  "sessions_completed": 14,
+  "mistakes_recorded": 26,
+  "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,
   "ci_fixed": 2,
@@ -252,7 +302,9 @@
    "meta-audit not executed",
    "7 rule violations in session s14 (Е15-Е21)",
    "markitdown: CI форка не исполняет protocol-verify — законное состояние (s16)",
-   "RVL не перегонялся в s16 (пакет claims вместо RVL-скрипта)"
+   "markitdown: ворота консента форка (422 при enabled=true) — прогон ждёт UI-решения Хозяина",
+   "invariant-manifest: ядро без witness-файла — вопрос канона СВИДЕТЕЛЯ",
+   "RVL не перегонялся в s17"
   ]
  },
  "chain_of_attestations": {
@@ -267,5 +319,6 @@
   "URL content not fetched — format only",
   "Lock self-attestation — external witness needed for full trust",
   "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
- ]
+ ],
+ "updated": "2026-11-19"
 }

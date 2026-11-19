@@ -1,0 +1,31 @@
+{
+  "имя": "КАНОН-ФЛАГОВ · дом rtynbirf",
+  "издан": "волна РЕВО 2026-11-19",
+  "источник_канона": "Дозион (dosezor) вердикты · живые пробы флота 2026-11-19 · мировая сходимость: github-community-projects/safe-settings (policy-as-code) + docs.github.com «Enabling security features at scale»",
+  "закон": "флаг ≠ канон при зелёных гейтах — болезнь T27; смотрит Дозион, лечит Доктор флагов (tools/flags_doctor.py); вердикт терминален; тишина I0",
+  "закодированные_флаги": {
+    "allow_squash_merge": true,
+    "delete_branch_on_merge": true,
+    "secret_scanning": "enabled",
+    "secret_scanning_push_protection": "enabled",
+    "vulnerability_alerts": true,
+    "automated_security_fixes": true,
+    "has_wiki": false,
+    "has_projects": false
+  },
+  "не_закодировано_честно": {
+    "allow_rebase_merge": "канон не прочитан из живых вердиктов однозначно — смотрит Дозион; Доктор флагов не гадает",
+    "allow_merge_commit": "то же",
+    "allow_auto_merge": "то же",
+    "allow_update_branch": "то же",
+    "use_squash_pr_title_as_default": "то же",
+    "branch_protection_main": "НЕ флаг-канон: прямая запись ритуалов дома в main — легальное состояние legit_open_states.txt (прецедент combain-v2 GH013: ruleset ломает самозапись); закалка = рука Хозяина",
+    "topics": "канон 5–15 смотрит Дозион; подбор тем = вкус содержательной волны, не флаг"
+  },
+  "границы": {
+    "fork": "markitdown лечится как все; отказ API — честная ПЛОМБА",
+    "чужая_живая_волна": "пуш <2.0ч (закон §3) отмечается в вердикте; флаги живут вне git-объектов, зона не блокирует лечение настроек",
+    "архив": "архивные тела — только чтение, вердикт АРХИВ",
+    "содержимое": "wiki-страницы и projects проверены пробой 2026-11-19: 0 страниц, 0 проектов — выключение ничего не прячет"
+  }
+}

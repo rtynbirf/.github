@@ -40,8 +40,8 @@ jobs:
         run: |
           for i in 1 2 3; do
             if python3 tools/lint-account-llms-txt.py --file llms-account.txt; then echo "фасад = API (попытка $i)"; exit 0; fi
-            echo "фасад расходится с API — гонка с house-live? перепроверка через 60 с (попытка $i/3)"
-            sleep 60
+            echo "фасад расходится с API — гонка с house-live? перепроверка через 120 с (окно ≥ цикла самозалечки) (попытка $i/3)"
+            sleep 120
           done
           echo "фасад расходится надлого — честный красный"
           exit 2

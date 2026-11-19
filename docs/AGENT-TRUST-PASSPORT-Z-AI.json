@@ -1,225 +1,271 @@
 {
-  "schema": "ATP-1.0 (Agent Trust Passport, maps to IETF ATEP draft-stone-atep-02)",
-  "agent_id": "z-ai",
-  "agent_type": "LLM (GLM-4)",
-  "issuer": "rtynbirf (account owner)",
-  "generated": "2026-11-18",
-  "sessions": [
-    {
-      "id": "s5",
-      "date": "2026-11-15",
-      "mandate": "A0 audit + bridge audit",
-      "result": "PACKAGE VALID + BRIDGE VALID",
-      "evidence_ref": "singulyar-a0-audit/reports/",
-      "canon_pass": true
-    },
-    {
-      "id": "s6",
-      "date": "2026-11-15",
-      "mandate": "R4 X-019 capabilities removal",
-      "result": "8/8 PASS",
-      "evidence_ref": "singulyar-a0-audit/r4_implementation/",
-      "canon_pass": true
-    },
-    {
-      "id": "s7",
-      "date": "2026-11-15",
-      "mandate": "R4 X-020…X-027 batch",
-      "result": "5 PASS + 2 PARTIAL",
-      "evidence_ref": "singulyar-a0-audit/r4_implementation/h021_027_batch.py",
-      "canon_pass": true
-    },
-    {
-      "id": "s8",
-      "date": "2026-11-15",
-      "mandate": "lex-naturae v0.6→v0.7 audit",
-      "result": "BOM fix, 70/70 tests",
-      "evidence_ref": "lex-naturae repo",
-      "canon_pass": true
-    },
-    {
-      "id": "s9",
-      "date": "2026-11-16",
-      "mandate": "lex-naturae self-test (проверить на себе)",
-      "result": "4/4 claims valid=True",
-      "evidence_ref": "lex-naturae/self-test-audit/",
-      "canon_pass": true
-    },
-    {
-      "id": "s10",
-      "date": "2026-11-16",
-      "mandate": "HUMAN-LFS v0.3→v0.4 audit",
-      "result": "4 fixes, 36/36 tests",
-      "evidence_ref": "singulyar-a0-audit/human-lfs/v0.4/",
-      "canon_pass": true
-    },
-    {
-      "id": "s11",
-      "date": "2026-11-16",
-      "mandate": "ecosystem inventory (36 repos)",
-      "result": "SBOM 33/36, DORA 1.5% elite, SLSA 0/36",
-      "evidence_ref": "singulyar-a0-audit/ecosystem-inventory/",
-      "canon_pass": true
-    },
-    {
-      "id": "s12",
-      "date": "2026-11-16",
-      "mandate": "КАНОН + Step 0 + RVL + meta-audit",
-      "result": "7 reinforcements, RVL PASS",
-      "evidence_ref": ".github/docs/ + scripts/",
-      "canon_pass": true
-    },
-    {
-      "id": "s13",
-      "date": "2026-11-16",
-      "mandate": "hologram CI fix",
-      "result": "root cause + fix + verified PASS",
-      "evidence_ref": "hologram repo commit e5088b4",
-      "canon_pass": true
-    },
-    {
-      "id": "s14",
-      "date": "2026-11-16",
-      "mandate": "подгон от пацанов: пакет PID1 (LFS Engine) — приёмка, двухслойный аудит, посадка",
-      "result": "AUDIT COMPLETE: HUMAN-LFS STRUCTURE PASS (7 узлов, LOCK ok) + lex-naturae valid=true 8/8; посажено в singulyar-a0-audit/pid1-podgon (a9d3c53); границы раскрыты в PROVENANCE.md",
-      "evidence_ref": "singulyar-a0-audit/pid1-podgon/audit/",
-      "canon_pass": true
-    },
-    {
-      "id": "s14",
-      "date": "2026-11-17",
-      "mandate": "invariant-manifest: PARTIAL→PASS",
-      "result": "PASS 30/30, 8/8 mutations, W3 semantic judge",
-      "evidence_ref": "invariant-manifest repo commit 279cc79",
-      "canon_pass": true
-    },
-    {
-      "id": "s15",
-      "date": "2026-11-18",
-      "mandate": "revo: волна 18 — закрыта фаза M6 (F-27 мозг>8 зон + F-28 layout-streaming); ответ на вопрос хозяина «почему REVO не сделан»",
-      "result": "F-27/F-28 ГОТОВО; selftest 24/24; смоук 36/0; claims lex-naturae valid=true 7/7, exit 0; 12 raw 200; commit 0e66e0d; CI+АВТОПИЛОТ запущены",
-      "evidence_ref": "revo repo commit 0e66e0d · self-test-audit/m6-wave/ (CSV+логи+claims)",
-      "canon_pass": true
-    }
+ "schema": "ATP-1.0 (Agent Trust Passport, maps to IETF ATEP draft-stone-atep-02)",
+ "agent_id": "z-ai",
+ "agent_type": "LLM (GLM-4)",
+ "issuer": "rtynbirf (account owner)",
+ "generated": "2026-11-18",
+ "sessions": [
+  {
+   "id": "s5",
+   "date": "2026-11-15",
+   "mandate": "A0 audit + bridge audit",
+   "result": "PACKAGE VALID + BRIDGE VALID",
+   "evidence_ref": "singulyar-a0-audit/reports/",
+   "canon_pass": true
+  },
+  {
+   "id": "s6",
+   "date": "2026-11-15",
+   "mandate": "R4 X-019 capabilities removal",
+   "result": "8/8 PASS",
+   "evidence_ref": "singulyar-a0-audit/r4_implementation/",
+   "canon_pass": true
+  },
+  {
+   "id": "s7",
+   "date": "2026-11-15",
+   "mandate": "R4 X-020…X-027 batch",
+   "result": "5 PASS + 2 PARTIAL",
+   "evidence_ref": "singulyar-a0-audit/r4_implementation/h021_027_batch.py",
+   "canon_pass": true
+  },
+  {
+   "id": "s8",
+   "date": "2026-11-15",
+   "mandate": "lex-naturae v0.6→v0.7 audit",
+   "result": "BOM fix, 70/70 tests",
+   "evidence_ref": "lex-naturae repo",
+   "canon_pass": true
+  },
+  {
+   "id": "s9",
+   "date": "2026-11-16",
+   "mandate": "lex-naturae self-test (проверить на себе)",
+   "result": "4/4 claims valid=True",
+   "evidence_ref": "lex-naturae/self-test-audit/",
+   "canon_pass": true
+  },
+  {
+   "id": "s10",
+   "date": "2026-11-16",
+   "mandate": "HUMAN-LFS v0.3→v0.4 audit",
+   "result": "4 fixes, 36/36 tests",
+   "evidence_ref": "singulyar-a0-audit/human-lfs/v0.4/",
+   "canon_pass": true
+  },
+  {
+   "id": "s11",
+   "date": "2026-11-16",
+   "mandate": "ecosystem inventory (36 repos)",
+   "result": "SBOM 33/36, DORA 1.5% elite, SLSA 0/36",
+   "evidence_ref": "singulyar-a0-audit/ecosystem-inventory/",
+   "canon_pass": true
+  },
+  {
+   "id": "s12",
+   "date": "2026-11-16",
+   "mandate": "КАНОН + Step 0 + RVL + meta-audit",
+   "result": "7 reinforcements, RVL PASS",
+   "evidence_ref": ".github/docs/ + scripts/",
+   "canon_pass": true
+  },
+  {
+   "id": "s13",
+   "date": "2026-11-16",
+   "mandate": "hologram CI fix",
+   "result": "root cause + fix + verified PASS",
+   "evidence_ref": "hologram repo commit e5088b4",
+   "canon_pass": true
+  },
+  {
+   "id": "s14",
+   "date": "2026-11-16",
+   "mandate": "подгон от пацанов: пакет PID1 (LFS Engine) — приёмка, двухслойный аудит, посадка",
+   "result": "AUDIT COMPLETE: HUMAN-LFS STRUCTURE PASS (7 узлов, LOCK ok) + lex-naturae valid=true 8/8; посажено в singulyar-a0-audit/pid1-podgon (a9d3c53); границы раскрыты в PROVENANCE.md",
+   "evidence_ref": "singulyar-a0-audit/pid1-podgon/audit/",
+   "canon_pass": true
+  },
+  {
+   "id": "s14",
+   "date": "2026-11-17",
+   "mandate": "invariant-manifest: PARTIAL→PASS",
+   "result": "PASS 30/30, 8/8 mutations, W3 semantic judge",
+   "evidence_ref": "invariant-manifest repo commit 279cc79",
+   "canon_pass": true
+  },
+  {
+   "id": "s15",
+   "date": "2026-11-18",
+   "mandate": "revo: волна 18 — закрыта фаза M6 (F-27 мозг>8 зон + F-28 layout-streaming); ответ на вопрос хозяина «почему REVO не сделан»",
+   "result": "F-27/F-28 ГОТОВО; selftest 24/24; смоук 36/0; claims lex-naturae valid=true 7/7, exit 0; 12 raw 200; commit 0e66e0d; CI+АВТОПИЛОТ запущены",
+   "evidence_ref": "revo repo commit 0e66e0d · self-test-audit/m6-wave/ (CSV+логи+claims)",
+   "canon_pass": true
+  },
+  {
+   "id": "s16",
+   "date": "2026-11-19",
+   "mandate": "assembly-protocol: «интегрируй всё у нас» — протокол v7 → механизм (автомат, CI, флот, канон claims)",
+   "result": "45/46 зелёных хвостов (1 законное состояние markitdown); автомат 15/15 векторов, 6/6 незаконных пойманы; HUMAN-LFS STRUCTURE PASS + lex-naturae valid=true 7/7; косяки Е11/Е14 [ПОВТОР], Е22-Е25 записаны тем же тактом",
+   "evidence_ref": "assembly-protocol/self-test-audit/protocol-wave/ (CSV + логи + claims + валидаторы)",
+   "canon_pass": true
+  }
+ ],
+ "mistakes_recorded": [
+  {
+   "id": "E10",
+   "class": "[ПОВТОР] вывода 7 — отказ от токена после решения Хозяина",
+   "date": "2026-11-15",
+   "session": "s5"
+  },
+  {
+   "id": "E11",
+   "class": "Step 0 не исполнен — не вычитал 22-реестр",
+   "date": "2026-11-15",
+   "session": "s5"
+  },
+  {
+   "id": "E12",
+   "class": "git push --force (04-конвенции §2: НИКОГДА)",
+   "date": "2026-11-15",
+   "session": "s5"
+  },
+  {
+   "id": "E13",
+   "class": "[ПОВТОР] Е1 — кириллица в URL Contents API",
+   "date": "2026-11-15",
+   "session": "s5"
+  },
+  {
+   "id": "E14",
+   "class": "commit-сообщения не в формате тип(область): суть",
+   "date": "2026-11-15",
+   "session": "s5"
+  },
+  {
+   "id": "E15",
+   "class": "[near-miss] план нового репо до прочтения обновлённого AGENTS.md v1.0 §4 — поймано каноном до любого пуша, ущерба нет",
+   "date": "2026-11-16",
+   "session": "s14"
+  },
+  {
+   "id": "Е15",
+   "class": "Step 0 gate не запущен перед операцией",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "Е16",
+   "class": "КАНОН не прогнан (PASS без обоих слоёв)",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "Е17",
+   "class": "ЛЕТОПИСЬ не записана тем же тактом",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "Е18",
+   "class": "Worklog TH-* не записан",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "Е19",
+   "class": "ATP не обновлён",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "Е20",
+   "class": "AUDIT-*.md не создан",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "Е21",
+   "class": "Косяки не записаны в реестр",
+   "date": "2026-11-17",
+   "session": "s14"
+  },
+  {
+   "id": "E11",
+   "class": "[ПОВТОР] Step 0 не исполнен до операций — правила вычитаны после волны",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E14",
+   "class": "[ПОВТОР] первые коммиты не в формате тип(область): суть",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E22",
+   "class": "rollout на 45 тел проверен только в собственном репо → 45 красных хвостов",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E23",
+   "class": "граница полномочий объявлена без сверки с уставом",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E24",
+   "class": "[ПОВТОР УСТАВ §7] двоеточие в нецитированном name = ghost-нуль ×2",
+   "date": "2026-11-19",
+   "session": "s16"
+  },
+  {
+   "id": "E25",
+   "class": "GITHUB_TOKEN-пуш не триггерит workflow — переподжиг только PAT-пушем",
+   "date": "2026-11-19",
+   "session": "s16"
+  }
+ ],
+ "rvl_status": "PASS",
+ "rvl_detail": "lex-naturae verified own meta-claim (70 tests, valid=True); HUMAN-LFS accepted own meta-node (36 tests, STRUCTURE PASS); first run found own bug (stderr vs stdout), fixed, re-run PASS",
+ "canon_compliance": {
+  "structure_layer": "HUMAN-LFS validate_graph.py",
+  "content_layer": "lex-naturae lex_naturae.py",
+  "full_pass_claims": [
+   "HUMAN-LFS-ENV-PASS",
+   "PID1-PODGON-AUDIT-PASS"
   ],
-  "mistakes_recorded": [
-    {
-      "id": "E10",
-      "class": "[ПОВТОР] вывода 7 — отказ от токена после решения Хозяина",
-      "date": "2026-11-15",
-      "session": "s5"
-    },
-    {
-      "id": "E11",
-      "class": "Step 0 не исполнен — не вычитал 22-реестр",
-      "date": "2026-11-15",
-      "session": "s5"
-    },
-    {
-      "id": "E12",
-      "class": "git push --force (04-конвенции §2: НИКОГДА)",
-      "date": "2026-11-15",
-      "session": "s5"
-    },
-    {
-      "id": "E13",
-      "class": "[ПОВТОР] Е1 — кириллица в URL Contents API",
-      "date": "2026-11-15",
-      "session": "s5"
-    },
-    {
-      "id": "E14",
-      "class": "commit-сообщения не в формате тип(область): суть",
-      "date": "2026-11-15",
-      "session": "s5"
-    },
-    {
-      "id": "E15",
-      "class": "[near-miss] план нового репо до прочтения обновлённого AGENTS.md v1.0 §4 — поймано каноном до любого пуша, ущерба нет",
-      "date": "2026-11-16",
-      "session": "s14"
-    },
-    {
-      "id": "Е15",
-      "class": "Step 0 gate не запущен перед операцией",
-      "date": "2026-11-17",
-      "session": "s14"
-    },
-    {
-      "id": "Е16",
-      "class": "КАНОН не прогнан (PASS без обоих слоёв)",
-      "date": "2026-11-17",
-      "session": "s14"
-    },
-    {
-      "id": "Е17",
-      "class": "ЛЕТОПИСЬ не записана тем же тактом",
-      "date": "2026-11-17",
-      "session": "s14"
-    },
-    {
-      "id": "Е18",
-      "class": "Worklog TH-* не записан",
-      "date": "2026-11-17",
-      "session": "s14"
-    },
-    {
-      "id": "Е19",
-      "class": "ATP не обновлён",
-      "date": "2026-11-17",
-      "session": "s14"
-    },
-    {
-      "id": "Е20",
-      "class": "AUDIT-*.md не создан",
-      "date": "2026-11-17",
-      "session": "s14"
-    },
-    {
-      "id": "Е21",
-      "class": "Косяки не записаны в реестр",
-      "date": "2026-11-17",
-      "session": "s14"
-    }
-  ],
-  "rvl_status": "PASS",
-  "rvl_detail": "lex-naturae verified own meta-claim (70 tests, valid=True); HUMAN-LFS accepted own meta-node (36 tests, STRUCTURE PASS); first run found own bug (stderr vs stdout), fixed, re-run PASS",
-  "canon_compliance": {
-    "structure_layer": "HUMAN-LFS validate_graph.py",
-    "content_layer": "lex-naturae lex_naturae.py",
-    "full_pass_claims": [
-      "HUMAN-LFS-ENV-PASS",
-      "PID1-PODGON-AUDIT-PASS"
-    ],
-    "step0_gate": "built (.github/scripts/step0_gate.py), not yet CI-integrated",
-    "proactive_fuzz": "directive in AGENTS.md, not yet executed"
-  },
-  "trust_score": {
-    "sessions_completed": 12,
-    "mistakes_recorded": 12,
-    "mistakes_repeated": 3,
-    "rvl_pass": true,
-    "canon_full_pass": 3,
-    "ci_fixed": 2,
-    "honest_gaps_declared": [
-      "SLSA 0/36",
-      "22 repos without tests",
-      "Step 0 not CI-integrated",
-      "meta-audit not executed",
-      "7 rule violations in session s14 (Е15-Е21)"
-    ]
-  },
-  "chain_of_attestations": {
-    "worklog_hash_chain": "H-PE11-PHOENIX/worklog.md (append-only, hash chain)",
-    "trace_hash_chain": "Singulyar HOST Trace (per-transition hash chain)",
-    "lock_file": "HUMAN-LFS BUILD_GRAPH.lock.json (node hashes)",
-    "rvl_recursive": "verification system verifies itself (one level)"
-  },
-  "boundaries": [
-    "PASS = machine-verifiable, not = truth",
-    "Excerpt can be cherry-picked from negation context",
-    "URL content not fetched — format only",
-    "Lock self-attestation — external witness needed for full trust",
-    "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
+  "step0_gate": "built (.github/scripts/step0_gate.py), not yet CI-integrated",
+  "proactive_fuzz": "directive in AGENTS.md, not yet executed"
+ },
+ "trust_score": {
+  "sessions_completed": 13,
+  "mistakes_recorded": 19,
+  "mistakes_repeated": 5,
+  "rvl_pass": true,
+  "canon_full_pass": 4,
+  "ci_fixed": 2,
+  "honest_gaps_declared": [
+   "SLSA 0/36",
+   "22 repos without tests",
+   "Step 0 not CI-integrated",
+   "meta-audit not executed",
+   "7 rule violations in session s14 (Е15-Е21)",
+   "markitdown: CI форка не исполняет protocol-verify — законное состояние (s16)",
+   "RVL не перегонялся в s16 (пакет claims вместо RVL-скрипта)"
   ]
+ },
+ "chain_of_attestations": {
+  "worklog_hash_chain": "H-PE11-PHOENIX/worklog.md (append-only, hash chain)",
+  "trace_hash_chain": "Singulyar HOST Trace (per-transition hash chain)",
+  "lock_file": "HUMAN-LFS BUILD_GRAPH.lock.json (node hashes)",
+  "rvl_recursive": "verification system verifies itself (one level)"
+ },
+ "boundaries": [
+  "PASS = machine-verifiable, not = truth",
+  "Excerpt can be cherry-picked from negation context",
+  "URL content not fetched — format only",
+  "Lock self-attestation — external witness needed for full trust",
+  "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
+ ]
 }

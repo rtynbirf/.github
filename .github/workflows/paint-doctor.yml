@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: полотно = байты, не размер (MITRE D3-FMBV)
         run: python3 tools/paint_doctor.py --check
 
@@ -42,7 +42,7 @@ jobs:
     if: failure() && github.event_name == 'push'
     timeout-minutes: 8
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: декод больных полотен cwd в настоящие байты
         run: python3 tools/paint_doctor.py --local-heal
       - name: коммит залечки (3 попытки — гонка за main, зуб A-HUSH)
@@ -76,7 +76,7 @@ jobs:
     if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: обход флота и лечение полотен (токен дозора, архив — честный пропуск)
         env:
           SENTINEL_TOKEN: ${{ secrets.SENTINEL_TOKEN }}

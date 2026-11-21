@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-20T16:11:07.981876+00:00",
- "sealed": [],
+ "generated": "2026-11-21T15:24:37.065613+00:00",
+ "sealed": [
+  "universal-agent"
+ ],
  "live": [
   ".github",
   "H-PE11-PHOENIX",
@@ -30,6 +32,7 @@
   "global-video-platforms-registry",
   "hologram",
   "index",
+  "inv-automat",
   "invariant-manifest",
   "karaoke-dream",
   "karta",
@@ -75,7 +78,6 @@
   "uace",
   "uace-pml",
   "uace-polymat",
-  "universal-agent",
   "voice-atlas-llm",
   "web-evolution-1991-2026",
   "windows-chronicle",

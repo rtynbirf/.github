@@ -164,6 +164,14 @@
    "result": "перебор 128 входов поймал лазейку переметки (Е36, повтор класса Е29/Е33/Е35); v2: гейты по свойствам, remedy-функция, revise-петля, хэш-цепь трассы; selftest 17/17, атаки 11/11; вкачано в repo-doctrine (Е36+27-код+27-отчёт) и dogovor ДОМ/",
    "evidence_ref": "repo-doctrine 27-ОТЧЁТ-АУДИТ-КВ-ФСМ-2026-11-20.md; scripts/audit_claim_fsm/{audit_v1,audit_v2_attacks}.py",
    "canon_pass": true
+  },
+  {
+   "id": "s24",
+   "date": "2026-11-21",
+   "mandate": "RUVSON-СМЫСЛОВОЙ-СЛОЙ: TH-AP-09 — «доработай и интегрируй» каталог смыслов",
+   "result": "каталог v2.1: 68 единиц с вердиктами и пломбами КВ-ФСМ (54 ACCEPT_SPEC, 14 открытых испытаний), хэш-пломба 9b4dd79d…; Е37 (ограниченный квантор) пойман прогоном каталога, закрыт в v2.1 автомата (самотест 19/19); вкачано в singulyar + ruvson-lyrics data/ + repo-doctrine 28; байт-сверка 5 точек сходится; токен ротирован",
+   "evidence_ref": "repo-doctrine 28-ОТЧЁТ-RUVSON-СМЫСЛОВОЙ-СЛОЙ-2026-11-21.md; scripts/ruvson/{check_catalog,build_v21,ritual9}.py",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -370,6 +378,12 @@
    "class": "гейты привязаны к метке типа вместо свойств утверждения: переметка report/instruction обходила контрпример-гейт; пойман перебором всех 128 входов; правило: гейт = свойство, метка = только маршрут пруфа",
    "date": "2026-11-20",
    "session": "s23"
+  },
+  {
+   "id": "E37",
+   "class": "детектор универсальности приравнивал ограниченные кванторы («почти всегда», «почти никогда») к универсальным; пойман прогоном каталога RUVSON (68 единиц) до пуша; правило: универсальность = квантор без ограничителя слева",
+   "date": "2026-11-21",
+   "session": "s24"
   }
  ],
  "rvl_status": "PASS",
@@ -385,8 +399,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 20,
-  "mistakes_recorded": 34,
+  "sessions_completed": 21,
+  "mistakes_recorded": 35,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,
@@ -417,5 +431,5 @@
   "Lock self-attestation — external witness needed for full trust",
   "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
  ],
- "updated": "2026-11-20"
+ "updated": "2026-11-21"
 }

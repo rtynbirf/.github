@@ -1,50 +1,21 @@
 {
- "generated": "2026-11-20T16:11:07.981876+00:00",
- "run_id": "44770765300",
- "run_url": "https://github.com/rtynbirf/.github/actions/runs/44770765300",
+ "generated": "2026-11-21T15:24:37.065613+00:00",
+ "run_id": "44919023090",
+ "run_url": "https://github.com/rtynbirf/.github/actions/runs/44919023090",
  "mode": "schedule",
  "verdict": "🚨 ДИВЕРГЕНЦИЙ: 1",
  "alarms": [
-  "ВСКРЫТА ПЕЧАТЬ (стало live): POLYMATH-ATLAS-GESTALT-CANON, commons, domovenok, domovoy-ritual, github-runbook, global-video-platforms-registry, language-through-the-ages, linguistic-code, nous, os-forge, polimat-hub, polimat-task174, polymath-atlas, polymath-atlas-v107, polymath-gen, polymath-multiagent, polymath-stckg-core, polymath-tools-atlas, red-thread-debt-audit, rent-mechanism-q43, rumu, ruvson-rse2, singulyar-llm, task-graph-propagator, uace-pml, uace-polymat, universal-agent, web-evolution-1991-2026, windows-chronicle, yazyk-skvoz-epohi"
+  "НОВАЯ ПЕЧАТЬ (стало archived): universal-agent"
  ],
  "seal": {
-  "sealed": 0,
+  "sealed": 1,
   "live": 78,
-  "note": "сверено с baseline от 2026-11-19",
+  "note": "сверено с baseline от 2026-11-20",
   "diff": {
-   "unsealed": [
-    "POLYMATH-ATLAS-GESTALT-CANON",
-    "commons",
-    "domovenok",
-    "domovoy-ritual",
-    "github-runbook",
-    "global-video-platforms-registry",
-    "language-through-the-ages",
-    "linguistic-code",
-    "nous",
-    "os-forge",
-    "polimat-hub",
-    "polimat-task174",
-    "polymath-atlas",
-    "polymath-atlas-v107",
-    "polymath-gen",
-    "polymath-multiagent",
-    "polymath-stckg-core",
-    "polymath-tools-atlas",
-    "red-thread-debt-audit",
-    "rent-mechanism-q43",
-    "rumu",
-    "ruvson-rse2",
-    "singulyar-llm",
-    "task-graph-propagator",
-    "uace-pml",
-    "uace-polymat",
-    "universal-agent",
-    "web-evolution-1991-2026",
-    "windows-chronicle",
-    "yazyk-skvoz-epohi"
-   ],
-   "newly_sealed": []
+   "unsealed": [],
+   "newly_sealed": [
+    "universal-agent"
+   ]
   }
  },
  "canon_workflows": {
@@ -61,7 +32,7 @@
  "snapshots": {
   "account-sentinel-latest.json": {
    "generated": "2026-11-18T20:29:03.516503+00:00",
-   "age_days": 1.82
+   "age_days": 2.79
   }
  },
  "registry10_footprints": {
@@ -78,5 +49,5 @@
    "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6771112727"
   }
  },
- "fingerprint": "302c2ad2fc66a863"
+ "fingerprint": "0e9d37fbf7442e90"
 }

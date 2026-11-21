@@ -172,6 +172,14 @@
    "result": "каталог v2.1: 68 единиц с вердиктами и пломбами КВ-ФСМ (54 ACCEPT_SPEC, 14 открытых испытаний), хэш-пломба 9b4dd79d…; Е37 (ограниченный квантор) пойман прогоном каталога, закрыт в v2.1 автомата (самотест 19/19); вкачано в singulyar + ruvson-lyrics data/ + repo-doctrine 28; байт-сверка 5 точек сходится; токен ротирован",
    "evidence_ref": "repo-doctrine 28-ОТЧЁТ-RUVSON-СМЫСЛОВОЙ-СЛОЙ-2026-11-21.md; scripts/ruvson/{check_catalog,build_v21,ritual9}.py",
    "canon_pass": true
+  },
+  {
+   "id": "s25",
+   "date": "2026-11-21",
+   "mandate": "КВ-ФСМ-ФЛОТ: TH-AP-10 — witness гоняет самотест автомата в каждом репо",
+   "result": "шаг КВ-ФСМ в dom-avtomat.yml (hashFiles-условие); вкачка v2.1 в 79/79 активных (158 операций, 0 ошибок); флот вырос до 79 (31 репо со стражами впервые); Е38 (расширение без базы, 24 красных) пойман witness-пересчётом волны и дочинен тем же тактом (64 пуша); финал 78/79 зелёных, markitdown = ворота 422",
+   "evidence_ref": "repo-doctrine 29-ОТЧЁТ-КВ-ФСМ-ФЛОТ-2026-11-21.md + 29-witness-CSV + 29-дочинка-Е38-CSV; scripts/dom_avtomat/{deploy_kv,fix_e38,witness_kv}.py",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -384,6 +392,12 @@
    "class": "детектор универсальности приравнивал ограниченные кванторы («почти всегда», «почти никогда») к универсальным; пойман прогоном каталога RUVSON (68 единиц) до пуша; правило: универсальность = квантор без ограничителя слева",
    "date": "2026-11-21",
    "session": "s24"
+  },
+  {
+   "id": "E38",
+   "class": "вкачка расширения без проверки наличия базы в каждой цели (31 новых репо получили yml+КВ-ФСМ без ДОМ/); 24 witness-красных; правило: расширение = сверка базы в каждой цели + witness-пересчёт до записей",
+   "date": "2026-11-21",
+   "session": "s25"
   }
  ],
  "rvl_status": "PASS",
@@ -399,8 +413,8 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 21,
-  "mistakes_recorded": 35,
+  "sessions_completed": 22,
+  "mistakes_recorded": 36,
   "mistakes_repeated": 6,
   "rvl_pass": true,
   "canon_full_pass": 4,

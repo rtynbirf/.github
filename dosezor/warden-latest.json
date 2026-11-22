@@ -1,21 +1,17 @@
 {
- "generated": "2026-11-21T15:24:37.065613+00:00",
- "run_id": "44919023090",
- "run_url": "https://github.com/rtynbirf/.github/actions/runs/44919023090",
+ "generated": "2026-11-22T15:22:05.051646+00:00",
+ "run_id": "45037893790",
+ "run_url": "https://github.com/rtynbirf/.github/actions/runs/45037893790",
  "mode": "schedule",
- "verdict": "🚨 ДИВЕРГЕНЦИЙ: 1",
- "alarms": [
-  "НОВАЯ ПЕЧАТЬ (стало archived): universal-agent"
- ],
+ "verdict": "🟢 КАНОН, ПЕЧАТЬ И СНИМКИ ЗДОРОВЫ",
+ "alarms": [],
  "seal": {
   "sealed": 1,
   "live": 78,
-  "note": "сверено с baseline от 2026-11-20",
+  "note": "сверено с baseline от 2026-11-21",
   "diff": {
    "unsealed": [],
-   "newly_sealed": [
-    "universal-agent"
-   ]
+   "newly_sealed": []
   }
  },
  "canon_workflows": {
@@ -32,7 +28,7 @@
  "snapshots": {
   "account-sentinel-latest.json": {
    "generated": "2026-11-18T20:29:03.516503+00:00",
-   "age_days": 2.79
+   "age_days": 3.79
   }
  },
  "registry10_footprints": {
@@ -49,5 +45,5 @@
    "url": "https://github.com/rtynbirf/github-runbook/issues/10#issuecomment-6771112727"
   }
  },
- "fingerprint": "0e9d37fbf7442e90"
+ "fingerprint": "ba4788b226aa8dc2"
 }

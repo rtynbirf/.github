@@ -188,6 +188,14 @@
    "result": "v3: гейт канвы КП — Е39 голое «нет» → HOLD_NEEDS_CE_CANVAS; Е40 КП-универсалия → FLAG_NEEDS_COUNTEREXAMPLE («всякий пруф частный»); Е41 kill-guard в SCOPE (REJECT ⇔ проба на всех маршрутах); Е42 scrub-счётчик в трассе. База v2.1 сверена байт-в-байт; слоты синхронизированы с домом (Е38/28-/29-/TH-AP-09/10 заняты). Приёмка: selftest 26/26, перебор 1024 входов × 10 инвариантов — 0 провалов, атаки 22/22; приёмщик: байт-сверка + прогоны из вкачанного файла. Вкачано: repo-doctrine (Е39-Е42+30-код+30-отчёт), dogovor ДОМ/ v3",
    "evidence_ref": "repo-doctrine 30-ОТЧЁТ-КВ-ФСМ-v3-2026-11-21.md; scripts/audit_claim_fsm/{audit_v3,audit_v3_attacks}.py",
    "canon_pass": true
+  },
+  {
+   "id": "s27",
+   "date": "2026-11-23",
+   "mandate": "СЦЕНА ·32: TH-AP-13 — «РАБОТАЮТ НЕ ВСЕ ПЕСНИ, МУЗЫКА СО СМЫСЛОМ ЛАГ, КАРАОКЕ ТЕКСТ ПОЛНЫЙ РАССИНХРОН — РАЗБЕРИСЬ ПОПРАВЬ УБЕРИ ОШИБКИ»",
+   "result": "диагноз живыми замерами: фонд цел (66 голосов дверь-0), Сборник мёртв (7 частей вычищены из дома — ждёт владельца), рассинхрон = кула резала голос (1750 мёртвых слов в 64 песнях) + лаг суфлёра (полный проход 972 строк на каждое слово). Латка С187: окно показа от голоса (гор0/гор1), расплющивание осей, недоверенные оси -> слоговый фолбэк, память по версии корпуса, суфлёр O(1), Сборник — честная метка. Приёмка: тест ядра 9/9, корпус 71/71 (441 мёртвое слово = 2.0%), байт-сверка, браузерный дым",
+   "evidence_ref": "singulyar СИНГУЛЯР_32_СЦЕНА.html (латка С187) + ИНСТРУМЕНТЫ/test_s32_scena_logic.js (9/9); H-PE11-PHOENIX worklog TH-AP-13",
+   "canon_pass": true
   }
  ],
  "mistakes_recorded": [
@@ -445,7 +453,7 @@
   "proactive_fuzz": "directive in AGENTS.md, not yet executed"
  },
  "trust_score": {
-  "sessions_completed": 23,
+  "sessions_completed": 24,
   "mistakes_recorded": 40,
   "mistakes_repeated": 6,
   "rvl_pass": true,
@@ -477,5 +485,5 @@
   "Lock self-attestation — external witness needed for full trust",
   "Self-tested tests — independent auditor needed (META-AUDIT-CHECKLIST)"
  ],
- "updated": "2026-11-21"
+ "updated": "2026-11-23"
 }

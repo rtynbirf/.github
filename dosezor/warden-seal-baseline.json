@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T15:22:05.051646+00:00",
+ "generated": "2026-11-23T19:15:38.853127+00:00",
  "sealed": [
   "universal-agent"
  ],
@@ -43,6 +43,7 @@
   "lex-naturae",
   "lfs-core",
   "linguistic-code",
+  "meta-layer-kit",
   "neutral-browser",
   "nous",
   "os-forge",

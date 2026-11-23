@@ -1,36 +1,16 @@
 {
- "generated": "2026-11-18T20:29:03.516503+00:00",
- "run_id": "44391473357",
- "verdict": "МЕСТА К ВЫЛИЗЫВАНИЮ: публичных 19",
- "public_repos": 19,
- "public_hole_repos": 19,
- "active_wave_repos": 26,
+ "generated": "2026-11-23T15:24:22.220376+00:00",
+ "run_id": "45204836778",
+ "verdict": "МЕСТА К ВЫЛИЗЫВАНИЮ: публичных 33",
+ "public_repos": 33,
+ "public_hole_repos": 33,
+ "active_wave_repos": 47,
  "private_billing_frozen": 0,
  "private_hole_flags": 0,
  "private_open_pr_repos": 0,
  "public": [
   {
-   "repo": "rtynbirf/cell-rs",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/cell-swarm",
+   "repo": "rtynbirf/commons",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -45,12 +25,133 @@
     "main не защищён"
    ],
    "notes": [
-    "T24: 1/20 uses без SHA-пина"
+    "T24: 4/28 uses без SHA-пина",
+    "T25: 1 пустых файлов: records.jsonl"
    ],
    "info": {}
   },
   {
-   "repo": "rtynbirf/code",
+   "repo": "rtynbirf/domovenok",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/6 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/domovoy-ritual",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 6/6 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/github-runbook",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/30 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/global-video-platforms-registry",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/11 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/karaoke-dream",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 8/22 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/language-through-the-ages",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/6 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/linguistic-code",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -59,66 +160,6 @@
     "флаг allow_update_branch≠канон",
     "флаг use_squash_pr_title_as_default≠канон",
     "topics=4 (канон 5–15)",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/fond-host",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/H-PE11-PHOENIX",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/hologram",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
     "projects включён",
     "wiki включён",
     "secret scanning выкл",
@@ -127,130 +168,8 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/invariant-manifest",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/karta",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/kb",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "topics=4 (канон 5–15)",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/khozyain",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/lex-naturae",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
-  },
-  {
-   "repo": "rtynbirf/lfs-core",
-   "holes": [
-    "флаг allow_squash_merge≠канон",
-    "флаг allow_rebase_merge≠канон",
-    "флаг delete_branch_on_merge≠канон",
-    "флаг allow_auto_merge≠канон",
-    "флаг allow_update_branch≠канон",
-    "флаг use_squash_pr_title_as_default≠канон",
-    "topics=0 (канон 5–15)",
-    "secret scanning выкл",
-    "push protection выкл",
-    "dependabot-алерты выкл",
-    "автофиксы выкл",
-    "main не защищён"
-   ],
    "notes": [
-    "T24: 2/2 uses без SHA-пина"
+    "T24: 4/4 uses без SHA-пина"
    ],
    "info": {}
   },
@@ -270,13 +189,13 @@
     "main не защищён"
    ],
    "notes": [
-    "T24: 4/13 uses без SHA-пина",
+    "T24: 10/28 uses без SHA-пина",
     "T25: 8 пустых файлов: py.typed, __init__.py, py.typed, __init__.py, __init__.py"
    ],
    "info": {}
   },
   {
-   "repo": "rtynbirf/polymat-hive",
+   "repo": "rtynbirf/nous",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -290,13 +209,94 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
+   "notes": [
+    "T24: 3/34 uses без SHA-пина"
+   ],
+   "info": {}
   },
   {
-   "repo": "rtynbirf/polymath-core",
+   "repo": "rtynbirf/os-forge",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/9 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/polimat-hub",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/19 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/polimat-task174",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 3/9 uses без SHA-пина",
+    "T25: 4 пустых файлов: receipt_for_file.py, p1.md, p4.md, p6.md"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/polymath-atlas",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 5/13 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/POLYMATH-ATLAS-GESTALT-CANON",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -311,13 +311,34 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
+   "notes": [
+    "T24: 7/11 uses без SHA-пина"
+   ],
+   "info": {}
   },
   {
-   "repo": "rtynbirf/repo-doctrine",
+   "repo": "rtynbirf/polymath-atlas-v107",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "topics=3 (канон 5–15)",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/10 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/polymath-gen",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -331,13 +352,15 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
+   "notes": [
+    "PR открытых: 1: #6 build(deps): bump the actions group with 3 updates",
+    "T24: 4/9 uses без SHA-пина",
+    "T25: 1 пустых файлов: __init__.py"
+   ],
+   "info": {}
   },
   {
-   "repo": "rtynbirf/repo-seed",
+   "repo": "rtynbirf/polymath-multiagent",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -345,7 +368,110 @@
     "флаг allow_auto_merge≠канон",
     "флаг allow_update_branch≠канон",
     "флаг use_squash_pr_title_as_default≠канон",
-    "topics=0 (канон 5–15)",
+    "topics=3 (канон 5–15)",
+    "discussions включён",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 3/6 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/polymath-stckg-core",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/19 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/polymath-tools-atlas",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "topics=3 (канон 5–15)",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/11 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/red-thread-debt-audit",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "topics=4 (канон 5–15)",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/9 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/rent-mechanism-q43",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/9 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/rumu",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
     "projects включён",
     "wiki включён",
     "secret scanning выкл",
@@ -354,13 +480,13 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
+   "notes": [
+    "T24: 4/5 uses без SHA-пина"
+   ],
+   "info": {}
   },
   {
-   "repo": "rtynbirf/rtynbirf",
+   "repo": "rtynbirf/ruvson-lyrics",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -374,13 +500,14 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
+   "notes": [
+    "PR открытых: 1: #11 Bump github/codeql-action/upload-sarif from 4.38.3",
+    "T24: 8/25 uses без SHA-пина"
+   ],
+   "info": {}
   },
   {
-   "repo": "rtynbirf/runtime-protocol",
+   "repo": "rtynbirf/ruvson-rse2",
    "holes": [
     "флаг allow_squash_merge≠канон",
     "флаг allow_rebase_merge≠канон",
@@ -394,10 +521,175 @@
     "автофиксы выкл",
     "main не защищён"
    ],
-   "notes": [],
-   "info": {
-    "pins_ok": true
-   }
+   "notes": [
+    "T24: 4/11 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/singulyar",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "PR открытых: 1: #80 Bump github/codeql-action/upload-sarif from 4.39.1",
+    "T24: 15/38 uses без SHA-пина",
+    "T25: 1 пустых файлов: .nojekyll"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/singulyar-llm",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/9 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/task-graph-propagator",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "topics=4 (канон 5–15)",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/9 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/uace-pml",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/10 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/uace-polymat",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/13 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/web-evolution-1991-2026",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 5/8 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/windows-chronicle",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/7 uses без SHA-пина"
+   ],
+   "info": {}
+  },
+  {
+   "repo": "rtynbirf/yazyk-skvoz-epohi",
+   "holes": [
+    "флаг allow_squash_merge≠канон",
+    "флаг allow_rebase_merge≠канон",
+    "флаг delete_branch_on_merge≠канон",
+    "флаг allow_auto_merge≠канон",
+    "флаг allow_update_branch≠канон",
+    "флаг use_squash_pr_title_as_default≠канон",
+    "projects включён",
+    "secret scanning выкл",
+    "push protection выкл",
+    "dependabot-алерты выкл",
+    "автофиксы выкл",
+    "main не защищён"
+   ],
+   "notes": [
+    "T24: 4/6 uses без SHA-пина",
+    "T25: 1 пустых файлов: .nojekyll"
+   ],
+   "info": {}
   }
  ]
 }

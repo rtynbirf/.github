@@ -1,14 +1,14 @@
 {
- "generated": "2026-11-26T17:45:18.001873+00:00",
- "run_id": "45870366658",
- "run_url": "https://github.com/rtynbirf/.github/actions/runs/45870366658",
+ "generated": "2026-11-27T17:29:04.906710+00:00",
+ "run_id": "46042177101",
+ "run_url": "https://github.com/rtynbirf/.github/actions/runs/46042177101",
  "mode": "schedule",
  "verdict": "🟢 КАНОН, ПЕЧАТЬ И СНИМКИ ЗДОРОВЫ",
  "alarms": [],
  "seal": {
   "sealed": 1,
-  "live": 82,
-  "note": "сверено с baseline от 2026-11-25",
+  "live": 83,
+  "note": "сверено с baseline от 2026-11-26",
   "diff": {
    "unsealed": [],
    "newly_sealed": []
@@ -28,7 +28,7 @@
  "snapshots": {
   "account-sentinel-latest.json": {
    "generated": "2026-11-23T15:24:22.220376+00:00",
-   "age_days": 3.1
+   "age_days": 4.09
   }
  },
  "registry10_footprints": {

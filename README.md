@@ -1,24 +1,36 @@
 <div align="center">
-  <img src="banner.png" alt=".github — Community health аккаунта: issue-формы и рамка" width="100%">
+
+<a href="https://github.com/rtynbirf/.github"><img src="banner.png" width="100%" alt=".github — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
 </div>
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
-  <img src="repo-muse.svg" width="100%" alt="Муза .github: мастерская МОРИСС · РАППОРТ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/repo-muse.svg" width="100%" alt="Муза .github: мастерская МОРИСС · РАППОРТ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
   <br/>
-  <img src="forge-divider.svg" width="62%" alt="делитель мастерской МОРИСС · РАППОРТ" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/.github@main/forge-divider.svg" width="62%" alt="делитель мастерской МОРИСС · РАППОРТ" />
 </div>
 <!--ФОРЖ:МУЗА:КОНЕЦ-->
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы .github в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы .github №17 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 123 | 19 | 528 | 2026-11-28 | 0 |
+| 123 | 17 | 1 | 2026-11-28 | 1 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# .github
+
+<div align="center">
+  <img src="banner.png" alt=".github — Community health аккаунта: issue-формы и рамка" width="100%">
+</div>
+
+
+
+
 
 <!--ФОРЖ:АККАУНТ:НАЧАЛО-->
 <div align="center">
